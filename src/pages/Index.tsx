@@ -1,4 +1,5 @@
-import { ArrowRight, Calendar, DollarSign, Search, CheckCircle, Download, Smartphone, Monitor } from "lucide-react";
+
+import { ArrowRight, Calendar, Download, Search, CheckCircle, Smartphone, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -46,7 +47,7 @@ const Index = () => {
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
               Never lose track of job applications again. Job Trackr helps you organize your entire job search journey, 
-              from application to offer, with powerful tracking and salary insights.
+              from application to offer, with powerful tracking and interview management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
@@ -65,8 +66,72 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* App Screenshots Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              See Job Trackr in Action
+            </h2>
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+              Get a glimpse of how Job Trackr helps you stay organized throughout your job search journey.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="space-y-4">
+              <img 
+                src="/lovable-uploads/72024027-a0c7-4b87-912b-7ceea12e4264.png" 
+                alt="Job Trackr Dashboard with Calendar View" 
+                className="rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 w-full"
+              />
+              <div className="text-center">
+                <h3 className="font-semibold text-slate-900 dark:text-white">Dashboard & Calendar View</h3>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">Track interviews and deadlines with integrated calendar</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <img 
+                src="/lovable-uploads/a5a3b4ee-6421-466e-8b2c-c8ff8b5a5d8e.png" 
+                alt="Job Applications List View" 
+                className="rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 w-full"
+              />
+              <div className="text-center">
+                <h3 className="font-semibold text-slate-900 dark:text-white">Applications Overview</h3>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">Manage all your applications in one organized view</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <img 
+                src="/lovable-uploads/51fac9d7-c3f3-4c6f-9f6e-09df8fba3a35.png" 
+                alt="Job Application Detail Form" 
+                className="rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 w-full"
+              />
+              <div className="text-center">
+                <h3 className="font-semibold text-slate-900 dark:text-white">Detailed Job Tracking</h3>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">Keep detailed records of each application and offer</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <img 
+                src="/lovable-uploads/b6056e39-3e6d-444e-a5c8-9ff7b4e9f127.png" 
+                alt="Job Search Integration" 
+                className="rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 w-full"
+              />
+              <div className="text-center">
+                <h3 className="font-semibold text-slate-900 dark:text-white">Job Search Integration</h3>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">Find and import opportunities from popular job boards</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
@@ -94,11 +159,11 @@ const Index = () => {
             <Card className="border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow duration-300">
               <CardHeader>
                 <div className="h-12 w-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mb-4">
-                  <DollarSign className="h-6 w-6 text-green-600 dark:text-green-400" />
+                  <CheckCircle className="h-6 w-6 text-green-600 dark:text-green-400" />
                 </div>
-                <CardTitle className="text-slate-900 dark:text-white">Salary Intelligence</CardTitle>
+                <CardTitle className="text-slate-900 dark:text-white">Offer Management</CardTitle>
                 <CardDescription className="text-slate-600 dark:text-slate-300">
-                  Compare advertised salaries with actual offers to negotiate better and understand market rates.
+                  Keep track of job offers, salaries, and benefits to make informed career decisions.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -119,7 +184,7 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
@@ -136,7 +201,7 @@ const Index = () => {
               <CardHeader className="text-center">
                 <CardTitle className="text-slate-900 dark:text-white text-2xl">Free</CardTitle>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold text-slate-900 dark:text-white">$0</span>
+                  <span className="text-4xl font-bold text-slate-900 dark:text-white">£0</span>
                   <span className="text-slate-600 dark:text-slate-300">/month</span>
                 </div>
                 <CardDescription className="text-slate-600 dark:text-slate-300 mt-4">
@@ -159,7 +224,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-slate-700 dark:text-slate-300">Salary tracking</span>
+                    <span className="text-slate-700 dark:text-slate-300">Offer tracking</span>
                   </div>
                 </div>
                 <Button className="w-full mt-6 bg-slate-600 hover:bg-slate-700 text-white">
@@ -176,7 +241,7 @@ const Index = () => {
               <CardHeader className="text-center">
                 <CardTitle className="text-slate-900 dark:text-white text-2xl">Pro</CardTitle>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold text-slate-900 dark:text-white">$7.99</span>
+                  <span className="text-4xl font-bold text-slate-900 dark:text-white">£7.99</span>
                   <span className="text-slate-600 dark:text-slate-300">/month</span>
                 </div>
                 <CardDescription className="text-slate-600 dark:text-slate-300 mt-4">
@@ -199,7 +264,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
-                    <span className="text-slate-700 dark:text-slate-300">Salary comparison tools</span>
+                    <span className="text-slate-700 dark:text-slate-300">Comprehensive offer comparison</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
