@@ -1,24 +1,442 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>trackr-career-pathways-hub</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Trackr - Track Your Job Search Like a Pro</title>
+    <meta name="description" content="Never lose track of job applications again. Job Trackr helps you organize your entire job search journey, from application to offer, with powerful tracking and interview management.">
+    <meta name="author" content="Job Trackr">
+    
+    <meta property="og:title" content="Job Trackr - Track Your Job Search Like a Pro">
+    <meta property="og:description" content="Never lose track of job applications again. Job Trackr helps you organize your entire job search journey, from application to offer, with powerful tracking and interview management.">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="min-h-screen bg-gradient">
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-content">
+                    <div class="nav-brand">
+                        <img src="/lovable-uploads/d02a44c8-c224-45a4-9d12-ca191441bd69.png" alt="Job Trackr Logo" class="logo">
+                        <span class="brand-text">Job Trackr</span>
+                    </div>
+                    <div class="nav-links">
+                        <a href="#features" class="nav-link">Features</a>
+                        <a href="#pricing" class="nav-link">Pricing</a>
+                        <button class="btn btn-primary">Sign Up Free</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
-    <meta property="og:title" content="trackr-career-pathways-hub" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="badge">🎯 Perfect for Recent Grads & Career Switchers</div>
+                    <h1 class="hero-title">
+                        Track Your Job Search
+                        <span class="text-blue">Like a Pro</span>
+                    </h1>
+                    <p class="hero-description">
+                        Never lose track of job applications again. Job Trackr helps you organize your entire job search journey, 
+                        from application to offer, with powerful tracking and interview management.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-lg">
+                            Start Tracking Jobs Free
+                            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                        <button class="btn btn-outline btn-lg">
+                            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4-4m0 0l-4 4m4-4v12"></path>
+                            </svg>
+                            Download App
+                        </button>
+                    </div>
+                    <p class="hero-features">
+                        ✅ Free forever plan • ✅ No credit card required • ✅ Mobile app coming soon
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+        <!-- App Screenshots Section -->
+        <section class="screenshots-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">See Job Trackr in Action</h2>
+                    <p class="section-description">
+                        Get a glimpse of how Job Trackr helps you stay organized throughout your job search journey.
+                    </p>
+                </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+                <div class="screenshots-grid">
+                    <div class="screenshot-item">
+                        <img src="/lovable-uploads/72024027-a0c7-4b87-912b-7ceea12e4264.png" alt="Job Trackr Dashboard with Calendar View" class="screenshot-img">
+                        <div class="screenshot-caption">
+                            <h3 class="screenshot-title">Dashboard & Calendar View</h3>
+                            <p class="screenshot-desc">Track interviews and deadlines with integrated calendar</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="/lovable-uploads/a5a3b4ee-6421-466e-8b2c-c8ff8b5a5d8e.png" alt="Job Applications List View" class="screenshot-img">
+                        <div class="screenshot-caption">
+                            <h3 class="screenshot-title">Applications Overview</h3>
+                            <p class="screenshot-desc">Manage all your applications in one organized view</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="/lovable-uploads/51fac9d7-c3f3-4c6f-9f6e-09df8fba3a35.png" alt="Job Application Detail Form" class="screenshot-img">
+                        <div class="screenshot-caption">
+                            <h3 class="screenshot-title">Detailed Job Tracking</h3>
+                            <p class="screenshot-desc">Keep detailed records of each application and offer</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="/lovable-uploads/b6056e39-3e6d-444e-a5c8-9ff7b4e9f127.png" alt="Job Search Integration" class="screenshot-img">
+                        <div class="screenshot-caption">
+                            <h3 class="screenshot-title">Job Search Integration</h3>
+                            <p class="screenshot-desc">Find and import opportunities from popular job boards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Everything You Need to Land Your Dream Job</h2>
+                    <p class="section-description">
+                        From tracking applications to managing interviews and comparing offers, 
+                        Job Trackr gives you the tools to stay organized and make informed decisions.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon feature-icon-blue">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Job Lifecycle Tracking</h3>
+                        <p class="feature-description">
+                            Track every application from submission to final decision with integrated calendar for interviews and follow-ups.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon feature-icon-green">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Offer Management</h3>
+                        <p class="feature-description">
+                            Keep track of job offers, salaries, and benefits to make informed career decisions.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon feature-icon-gray">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Job Search Integration</h3>
+                        <p class="feature-description">
+                            Seamlessly import jobs from popular job boards and maintain all your applications in one place.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Simple, Transparent Pricing</h2>
+                    <p class="section-description">
+                        Start for free and upgrade when you need more. No hidden fees, cancel anytime.
+                    </p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Free Plan -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Free</h3>
+                            <div class="pricing-price">
+                                <span class="price">£0</span>
+                                <span class="period">/month</span>
+                            </div>
+                            <p class="pricing-description">Perfect for getting started with job tracking</p>
+                        </div>
+                        <div class="pricing-features">
+                            <div class="feature-item">
+                                <svg class="feature-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Track up to 3 jobs per month</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg class="feature-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Basic job lifecycle tracking</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg class="feature-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Interview calendar</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg class="feature-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Offer tracking</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary btn-full">Get Started Free</button>
+                    </div>
+
+                    <!-- Pro Plan -->
+                    <div class="pricing-card pricing-card-popular">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Pro</h3>
+                            <div class="pricing-price">
+                                <span class="price">£7.99</span>
+                                <span class="period">/month</span>
+                            </div>
+                            <p class="pricing-description">For serious job seekers and career switchers</p>
+                        </div>
+                        <div class="pricing-features">
+                            <div class="feature-item">
+                                <svg class="feature-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Unlimited job tracking</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg class="feature-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Advanced analytics & insights</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg class="feature-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Job board integrations</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg class="feature-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Comprehensive offer comparison</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg class="feature-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Priority customer support</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg class="feature-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Mobile app access (when available)</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-full">Start Pro Trial</button>
+                    </div>
+                </div>
+
+                <div class="pricing-note">
+                    <p>All plans include a 14-day free trial. No credit card required to start.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <div class="container">
+                <div class="benefits-grid">
+                    <div class="benefits-content">
+                        <h2 class="section-title">Perfect for Your Career Stage</h2>
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <svg class="benefit-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <div>
+                                    <h3 class="benefit-title">Recent Graduates</h3>
+                                    <p class="benefit-description">Navigate your first job search with confidence and organization</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <svg class="benefit-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <div>
+                                    <h3 class="benefit-title">Active Job Seekers</h3>
+                                    <p class="benefit-description">Manage multiple applications without missing opportunities</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <svg class="benefit-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <div>
+                                    <h3 class="benefit-title">Career Switchers</h3>
+                                    <p class="benefit-description">Compare offers across industries to make informed decisions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefits-demo">
+                        <div class="demo-card">
+                            <div class="demo-item demo-item-interview">
+                                <span class="demo-job">Software Engineer - Google</span>
+                                <span class="demo-status demo-status-interview">Interview Scheduled</span>
+                            </div>
+                            <div class="demo-item demo-item-sent">
+                                <span class="demo-job">Product Manager - Meta</span>
+                                <span class="demo-status demo-status-sent">Application Sent</span>
+                            </div>
+                            <div class="demo-item demo-item-offer">
+                                <span class="demo-job">UX Designer - Airbnb</span>
+                                <span class="demo-status demo-status-offer">Offer Received</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Section -->
+        <section class="platform-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Access Anywhere, Anytime</h2>
+                    <p class="section-description">
+                        Start with our web app today, and get ready for our mobile app launching soon.
+                    </p>
+                </div>
+                
+                <div class="platform-grid">
+                    <div class="platform-card">
+                        <div class="platform-header">
+                            <svg class="platform-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            <h3 class="platform-title">Web Application</h3>
+                            <p class="platform-description">
+                                Full-featured web app available now. Start tracking your job search today.
+                            </p>
+                        </div>
+                        <button class="btn btn-primary btn-full">Launch Web App</button>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-header">
+                            <svg class="platform-icon platform-icon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                            <h3 class="platform-title">Mobile App</h3>
+                            <p class="platform-description">
+                                Native mobile app in development. Get notified when it's ready.
+                            </p>
+                        </div>
+                        <button class="btn btn-outline btn-full">
+                            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4-4m0 0l-4 4m4-4v12"></path>
+                            </svg>
+                            Notify Me
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Take Control of Your Job Search?</h2>
+                    <p class="cta-description">
+                        Join thousands of job seekers who are already using Job Trackr to land their dream jobs.
+                    </p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-white btn-lg">
+                            Get Started Free
+                            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                        <button class="btn btn-outline-white btn-lg">Schedule Demo</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img src="/lovable-uploads/d02a44c8-c224-45a4-9d12-ca191441bd69.png" alt="Job Trackr Logo" class="logo">
+                            <span class="brand-text">Job Trackr</span>
+                        </div>
+                        <p class="footer-description">
+                            The ultimate job search companion for recent graduates, job seekers, and career switchers.
+                        </p>
+                        <p class="footer-copyright">© 2024 Job Trackr. All rights reserved.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h3 class="footer-title">Product</h3>
+                        <ul class="footer-list">
+                            <li><a href="#features" class="footer-link">Features</a></li>
+                            <li><a href="#pricing" class="footer-link">Pricing</a></li>
+                            <li><a href="#" class="footer-link">Mobile App</a></li>
+                            <li><a href="#" class="footer-link">Updates</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3 class="footer-title">Support</h3>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">Help Center</a></li>
+                            <li><a href="#" class="footer-link">Contact Us</a></li>
+                            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                            <li><a href="#" class="footer-link">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
