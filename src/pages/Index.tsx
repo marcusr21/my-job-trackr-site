@@ -1,4 +1,3 @@
-
 import { ArrowRight, Calendar, DollarSign, Search, CheckCircle, Download, Smartphone, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -115,6 +114,113 @@ const Index = () => {
                 </CardDescription>
               </CardHeader>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+              Start for free and upgrade when you need more. No hidden fees, cancel anytime.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Free Plan */}
+            <Card className="border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow duration-300">
+              <CardHeader className="text-center">
+                <CardTitle className="text-slate-900 dark:text-white text-2xl">Free</CardTitle>
+                <div className="mt-4">
+                  <span className="text-4xl font-bold text-slate-900 dark:text-white">$0</span>
+                  <span className="text-slate-600 dark:text-slate-300">/month</span>
+                </div>
+                <CardDescription className="text-slate-600 dark:text-slate-300 mt-4">
+                  Perfect for getting started with job tracking
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-slate-700 dark:text-slate-300">Track up to 3 jobs per month</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-slate-700 dark:text-slate-300">Basic job lifecycle tracking</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-slate-700 dark:text-slate-300">Interview calendar</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-slate-700 dark:text-slate-300">Salary tracking</span>
+                  </div>
+                </div>
+                <Button className="w-full mt-6 bg-slate-600 hover:bg-slate-700 text-white">
+                  Get Started Free
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Pro Plan */}
+            <Card className="border-blue-200 dark:border-blue-700 hover:shadow-lg transition-shadow duration-300 relative">
+              <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white">
+                Most Popular
+              </Badge>
+              <CardHeader className="text-center">
+                <CardTitle className="text-slate-900 dark:text-white text-2xl">Pro</CardTitle>
+                <div className="mt-4">
+                  <span className="text-4xl font-bold text-slate-900 dark:text-white">$7.99</span>
+                  <span className="text-slate-600 dark:text-slate-300">/month</span>
+                </div>
+                <CardDescription className="text-slate-600 dark:text-slate-300 mt-4">
+                  For serious job seekers and career switchers
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-slate-700 dark:text-slate-300">Unlimited job tracking</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-slate-700 dark:text-slate-300">Advanced analytics & insights</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-slate-700 dark:text-slate-300">Job board integrations</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-slate-700 dark:text-slate-300">Salary comparison tools</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-slate-700 dark:text-slate-300">Priority customer support</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                    <span className="text-slate-700 dark:text-slate-300">Mobile app access (when available)</span>
+                  </div>
+                </div>
+                <Button className="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white">
+                  Start Pro Trial
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-slate-600 dark:text-slate-300">
+              All plans include a 14-day free trial. No credit card required to start.
+            </p>
           </div>
         </div>
       </section>
