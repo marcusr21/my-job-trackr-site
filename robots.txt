@@ -1,0 +1,22 @@
+# My Job Trackr - robots.txt
+        # https://myjobtrackr.com/robots.txt
+
+        User-agent: *
+        Allow: /
+
+        # Sitemap location
+        Sitemap: https://myjobtrackr.com/sitemap.xml
+
+        # Disallow admin/private areas (if they exist on this domain)
+        # Disallow: /admin/
+        # Disallow: /private/
+
+        # Allow all CSS, JS, and images for proper rendering
+        Allow: /public/css/
+        Allow: /public/js/
+        Allow: /public/img/
+        Allow: /styles.css
+        Allow: /script.js
+
+        # Crawl-delay (optional - only if you want to limit crawl rate)
+        # Crawl-delay: 10
