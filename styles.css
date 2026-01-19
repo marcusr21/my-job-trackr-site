@@ -1138,3 +1138,180 @@ section {
         grid-template-columns: 1fr;
     }
 }
+
+/* FAQ Section */
+ .faq-section {
+     padding: 80px 20px;
+     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+ }
+
+.faq-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+}
+
+.faq-item {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.1);
+    transform: translateY(-2px);
+}
+
+.faq-question {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.faq-answer {
+    color: #475569;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 60px 20px;
+    }
+
+    .faq-item {
+        padding: 24px 20px;
+    }
+
+    .faq-question {
+        font-size: 1.1rem;
+    }
+
+    .faq-answer {
+        font-size: 0.95rem;
+    }
+}
+
+/* App Store Badge Responsive */
+.hero-buttons a img {
+    height: auto;
+    max-width: 200px;
+}
+
+@media (max-width: 640px) {
+    .hero-buttons a img {
+        max-width: 160px;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-buttons a img {
+        max-width: 250px;
+    }
+}
+
+/* Maintain aspect ratio */
+.hero-buttons a img {
+    display: block;
+}
+
+/* Platform Section Updates */
+.platform-section {
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.platform-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 4xl;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .platform-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.platform-card {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.platform-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: #2563eb;
+}
+
+.platform-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.platform-icon {
+    width: 4rem;
+    height: 4rem;
+    color: #2563eb;
+    margin: 0 auto 1rem;
+}
+
+.platform-icon-green {
+    color: #16a34a;
+}
+
+.platform-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.platform-description {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* App Store Badge in Platform Card */
+.platform-card a[href*="apps.apple.com"] img {
+    transition: transform 0.3s ease;
+}
+
+.platform-card:hover a[href*="apps.apple.com"] img {
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .platform-section {
+        padding: 3rem 0;
+    }
+
+    .platform-card {
+        padding: 1.5rem;
+    }
+
+    .platform-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .platform-card a[href*="apps.apple.com"] img {
+        height: 44px;
+        width: auto;
+    }
+}
