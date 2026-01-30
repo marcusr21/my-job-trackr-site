@@ -30,6 +30,15 @@ section {
 
 .text-blue {
     color: #2563eb;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: all 0.2s ease;
+}
+
+.text-blue:hover {
+    color: #1d4ed8;
+    text-decoration-thickness: 2px;
 }
 
 /* Icons */
@@ -229,6 +238,7 @@ section {
     display: flex;
     gap: 16px;
     margin-bottom: 40px;
+    align-items: center;
 }
 
 .hero-features {
@@ -1033,6 +1043,45 @@ section {
     }
 }
 
+/* WHAT IS A JOB TRACKER SECTION */
+.what-is-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f0f9ff 0%, #fefce8 100%);
+}
+
+.what-is-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.what-is-text {
+    margin-top: 32px;
+    text-align: left;
+}
+
+.what-is-text p {
+    font-size: 1.05rem;
+    color: #374151;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.what-is-text strong {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .what-is-section {
+        padding: 60px 20px;
+    }
+
+    .what-is-text p {
+        font-size: 0.95rem;
+    }
+}
+
 /* SOLUTION CARDS SECTION */
 .solutions-section {
     padding: 80px 0;
@@ -1202,27 +1251,74 @@ section {
     }
 }
 
-/* App Store Badge Responsive */
-.hero-buttons a img {
-    height: auto;
-    max-width: 200px;
+/* App Store and Google Play Badge Alignment */
+.hero-buttons .app-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.hero-buttons .app-badge img {
+    width: auto !important;
+    max-width: none !important;
+    display: block;
+}
+
+/* App Store badge - smaller because less padding in image */
+.hero-buttons a[href*="apps.apple.com"] img {
+    height: 56px !important;
+}
+
+/* Google Play badge - larger because more padding in image */
+.hero-buttons a[href*="play.google.com"] img {
+    height: 80px !important;
+}
+
+.hero-buttons .btn {
+    flex-shrink: 0;
+}
+
+.hero-buttons .btn-lg {
+    padding: 16px 40px !important;
+    height: 56px !important;
+    min-height: 56px !important;
+    display: inline-flex !important;
+    align-items: center !important;
 }
 
 @media (max-width: 640px) {
-    .hero-buttons a img {
-        max-width: 160px;
+    /* App Store badge mobile */
+    .hero-buttons a[href*="apps.apple.com"] img {
+        height: 48px !important;
+    }
+
+    /* Google Play badge mobile - proportionally larger */
+    .hero-buttons a[href*="play.google.com"] img {
+        height: 68px !important;
+    }
+
+    .hero-buttons .btn-lg {
+        padding: 12px 32px !important;
+        height: 48px !important;
+        min-height: 48px !important;
+        font-size: 0.95rem;
     }
 }
 
 @media (min-width: 768px) {
-    .hero-buttons a img {
-        max-width: 250px;
+    .hero-buttons a[href*="apps.apple.com"] img {
+        height: 56px !important;
     }
-}
 
-/* Maintain aspect ratio */
-.hero-buttons a img {
-    display: block;
+    .hero-buttons a[href*="play.google.com"] img {
+        height: 80px !important;
+    }
+
+    .hero-buttons .btn-lg {
+        height: 56px !important;
+        min-height: 56px !important;
+    }
 }
 
 /* Platform Section Updates */
@@ -1286,13 +1382,35 @@ section {
     line-height: 1.6;
 }
 
-/* App Store Badge in Platform Card */
-.platform-card a[href*="apps.apple.com"] img {
+/* App Store and Google Play Badge in Platform Card */
+.platform-card a[href*="apps.apple.com"] img,
+.platform-card a[href*="play.google.com"] img {
     transition: transform 0.3s ease;
+    width: auto;
 }
 
-.platform-card:hover a[href*="apps.apple.com"] img {
+/* App Store badge in platform */
+.platform-card a[href*="apps.apple.com"] img {
+    height: 52px !important;
+}
+
+/* Google Play badge in platform - larger due to image padding */
+.platform-card a[href*="play.google.com"] img {
+    height: 74px !important;
+}
+
+.platform-card:hover a[href*="apps.apple.com"] img,
+.platform-card:hover a[href*="play.google.com"] img {
     transform: scale(1.05);
+}
+
+/* Footer badges */
+.footer a[href*="apps.apple.com"] img {
+    height: 52px !important;
+}
+
+.footer a[href*="play.google.com"] img {
+    height: 74px !important;
 }
 
 /* Mobile Responsive */
@@ -1311,7 +1429,18 @@ section {
     }
 
     .platform-card a[href*="apps.apple.com"] img {
-        height: 44px;
-        width: auto;
+        height: 44px !important;
+    }
+
+    .platform-card a[href*="play.google.com"] img {
+        height: 63px !important;
+    }
+
+    .footer a[href*="apps.apple.com"] img {
+        height: 44px !important;
+    }
+
+    .footer a[href*="play.google.com"] img {
+        height: 63px !important;
     }
 }
