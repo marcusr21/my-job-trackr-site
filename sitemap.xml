@@ -68,4 +68,18 @@
         <priority>0.7</priority>
     </url>
 
+    <url>
+        <loc>https://myjobtrackr.com/blogs/job-search-tips-to-land-more-interviews/</loc>
+        <lastmod>2026-02-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://myjobtrackr.com/blogs/how-to-manage-your-job-search-from-your-phone/</loc>
+        <lastmod>2026-02-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
 </urlset>
