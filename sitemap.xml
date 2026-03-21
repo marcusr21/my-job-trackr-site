@@ -56,7 +56,7 @@
     <!-- Blog Pages -->
     <url>
         <loc>https://myjobtrackr.com/blogs/</loc>
-        <lastmod>2026-02-09</lastmod>
+        <lastmod>2026-03-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -78,6 +78,13 @@
     <url>
         <loc>https://myjobtrackr.com/blogs/how-to-manage-your-job-search-from-your-phone/</loc>
         <lastmod>2026-02-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://myjobtrackr.com/blogs/job-search-tools-every-job-seeker-needs/</loc>
+        <lastmod>2026-03-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
