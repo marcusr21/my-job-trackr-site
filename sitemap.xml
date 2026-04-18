@@ -30,7 +30,7 @@
     <!-- Blog Index -->
     <url>
         <loc>https://myjobtrackr.com/blogs/</loc>
-        <lastmod>2026-04-12</lastmod>
+        <lastmod>2026-04-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -67,6 +67,13 @@
     <url>
         <loc>https://myjobtrackr.com/blogs/how-to-land-a-graduate-scheme/</loc>
         <lastmod>2026-04-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://myjobtrackr.com/blogs/uk-graduate-job-market-2026/</loc>
+        <lastmod>2026-04-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
