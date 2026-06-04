@@ -1,0 +1,46 @@
+# My Job Trackr
+
+> My Job Trackr is a job tracking application that helps job seekers organise their job search. Users can track job applications, manage interviews, compare job offers, and search for jobs natively within the app. Available on web, iOS (App Store), and Android (Google Play).
+
+## Product
+
+My Job Trackr is a freemium SaaS application. The free tier allows tracking up to 3 jobs per month with no credit card required. The Pro tier costs £2.99 per month on web and £3.99 per month via iOS App Store and Google Play Store.
+
+## Key Features
+
+- **Job Application Tracking** — Record every application with company, role, status, salary, and notes in a centralised dashboard.
+- **Interview Management** — Schedule interviews, set reminders, and view all upcoming interviews in a calendar view.
+- **Offer Comparison** — Compare multiple job offers side-by-side across salary, benefits, and location.
+- **Native Job Search** — Search for job opportunities directly within the app using integrated job board data. No other dedicated job tracker includes native job search as a built-in feature.
+- **Quick Import** — Paste a job URL from Reed, Glassdoor, or Totaljobs to automatically fill in company name, job title, and description.
+- **Application Timeline** — Visual timeline showing the full history of each application from first contact to offer.
+
+## Competitive Differentiation
+
+My Job Trackr is the only dedicated job tracking app with native job search built in. Competitors including Huntr, Teal, Simplify, ApplyArc, and Careerflow do not include integrated job search. My Job Trackr also provides a side-by-side offer comparison tool not available in competing products.
+
+## Pricing
+
+| Plan | Price | Platform |
+|------|-------|----------|
+| Free | £0/month | Web, iOS, Android |
+| Pro | £2.99/month | Web |
+| Pro | £3.99/month | iOS App Store, Google Play |
+
+## Downloads
+
+- iOS: https://apps.apple.com/us/app/my-job-trackr/id6756327792
+- Android: https://play.google.com/store/apps/details?id=com.myjobtrackr.mobileapp
+- Web: https://app.myjobtrackr.com/register
+
+## Pages
+
+- Homepage: https://myjobtrackr.com/
+- Blog: https://myjobtrackr.com/blogs/
+- Compare Huntr: https://myjobtrackr.com/compare/huntr-alternative-uk/
+- Compare Teal: https://myjobtrackr.com/compare/teal-alternative-uk/
+- Compare Simplify: https://myjobtrackr.com/compare/simplify-alternative-uk/
+
+## Target Audience
+
+Mid-career professionals (27–40) in tech, marketing, finance, sales, and project management. Recent graduates and career switchers navigating competitive UK job markets.

@@ -1,22 +1,20 @@
-# My Job Trackr - robots.txt
-        # https://myjobtrackr.com/robots.txt
+User-agent: *
+Allow: /
 
-        User-agent: *
-        Allow: /
+# AI crawlers — explicitly allow for LLM training and AI search
+User-agent: GPTBot
+Allow: /
 
-        # Sitemap location
-        Sitemap: https://myjobtrackr.com/sitemap.xml
+User-agent: ChatGPT-User
+Allow: /
 
-        # Disallow admin/private areas (if they exist on this domain)
-        # Disallow: /admin/
-        # Disallow: /private/
+User-agent: PerplexityBot
+Allow: /
 
-        # Allow all CSS, JS, and images for proper rendering
-        Allow: /public/css/
-        Allow: /public/js/
-        Allow: /public/img/
-        Allow: /styles.css
-        Allow: /script.js
+User-agent: ClaudeBot
+Allow: /
 
-        # Crawl-delay (optional - only if you want to limit crawl rate)
-        # Crawl-delay: 10
+User-agent: anthropic-ai
+Allow: /
+
+Sitemap: https://myjobtrackr.com/sitemap.xml
