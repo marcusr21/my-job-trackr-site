@@ -1,0 +1,100 @@
+name: IndexNow URL Submission
+
+# Triggers after a push to main that includes HTML changes.
+# This fires after a PR is merged, at which point the pages are live on GitHub Pages.
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '*.html'
+      - '**/*.html'
+
+jobs:
+  submit-to-indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # fetch-depth 2 gives us HEAD and HEAD~1 so we can diff changed files
+          fetch-depth: 2
+
+      - name: Detect changed HTML files and submit to IndexNow
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          DOMAIN="https://myjobtrackr.com"
+
+          # Validate the secret is present
+          if [ -z "$INDEXNOW_KEY" ]; then
+            echo "::error::INDEXNOW_KEY secret is not set. See README for setup instructions."
+            exit 1
+          fi
+
+          # Get changed/added HTML files (excludes deletions — no point submitting deleted pages)
+          CHANGED_FILES=$(git diff --name-only --diff-filter=ACM HEAD~1 HEAD | grep '\.html$' || true)
+
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No HTML files changed. Skipping IndexNow submission."
+            exit 0
+          fi
+
+          echo "Changed HTML files:"
+          echo "$CHANGED_FILES"
+
+          # Map file paths to canonical URLs
+          URLS=()
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            if [ "$file" = "index.html" ]; then
+              URLS+=("$DOMAIN/")
+            elif [[ "$file" == */index.html ]]; then
+              dir="${file%/index.html}"
+              URLS+=("$DOMAIN/$dir/")
+            else
+              # e.g. privacy.html -> /privacy  |  terms.html -> /terms
+              page="${file%.html}"
+              URLS+=("$DOMAIN/$page")
+            fi
+          done <<< "$CHANGED_FILES"
+
+          echo ""
+          echo "URLs to submit to IndexNow:"
+          printf '  %s\n' "${URLS[@]}"
+
+          # Build JSON payload using jq (available on ubuntu-latest)
+          PAYLOAD=$(jq -n \
+            --arg host "myjobtrackr.com" \
+            --arg key "$INDEXNOW_KEY" \
+            --arg keyLocation "$DOMAIN/$INDEXNOW_KEY.txt" \
+            --argjson urlList "$(printf '%s\n' "${URLS[@]}" | jq -R . | jq -s .)" \
+            '{host: $host, key: $key, keyLocation: $keyLocation, urlList: $urlList}')
+
+          echo ""
+          echo "Payload: $PAYLOAD"
+
+          # POST to IndexNow (api.indexnow.org distributes to all participating engines:
+          # Bing, Yandex, Seznam, and others)
+          HTTP_STATUS=$(curl -s -o /tmp/indexnow_response.txt -w "%{http_code}" \
+            -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$PAYLOAD")
+
+          echo ""
+          echo "IndexNow API status: $HTTP_STATUS"
+          echo "Response body: $(cat /tmp/indexnow_response.txt)"
+
+          # IndexNow response codes:
+          #   200 / 202 — accepted
+          #   400 — invalid request format
+          #   403 — key not found or key file content mismatch
+          #   422 — URLs not belonging to the host
+          #   429 — too many requests
+          if [ "$HTTP_STATUS" = "200" ] || [ "$HTTP_STATUS" = "202" ]; then
+            echo ""
+            echo "Successfully submitted ${#URLS[@]} URL(s) to IndexNow."
+          else
+            echo "::error::IndexNow submission failed with HTTP $HTTP_STATUS."
+            exit 1
+          fi

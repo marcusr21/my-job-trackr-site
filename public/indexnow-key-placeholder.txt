@@ -1,0 +1,8 @@
+REPLACE_THIS_FILE_WITH_YOUR_KEY_FILE
+
+Instructions:
+1. Generate your IndexNow key (see README or run: openssl rand -hex 32)
+2. Delete this file
+3. Create a new file named exactly <your-key>.txt (e.g. a1b2c3d4....txt)
+4. The file contents must be ONLY the key value (no newline, no spaces)
+5. Add the same key value as a GitHub Secret named INDEXNOW_KEY
