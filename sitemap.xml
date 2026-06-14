@@ -7,7 +7,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://myjobtrackr.com/</loc>
-        <lastmod>2026-06-10</lastmod>
+        <lastmod>2026-06-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -60,7 +60,14 @@
     <!-- Blog Posts -->
     <url>
         <loc>https://myjobtrackr.com/blogs/how-to-track-job-applications-effectively/</loc>
-        <lastmod>2026-06-10</lastmod>
+        <lastmod>2026-06-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://myjobtrackr.com/blogs/job-tracking-system/</loc>
+        <lastmod>2026-06-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>

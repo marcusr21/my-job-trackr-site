@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>Building a Job Tracking System That Actually Works | My Job Trackr</title>
+    <meta name="description" content="A job tracking system keeps your job search organised from first application to final offer. Here is how to build one — with app and spreadsheet options compared.">
+    <meta name="keywords" content="job tracking system, job search tracking software, online job tracking, track job applications, job tracking app, job application system, job search organiser">
+    <meta name="author" content="Marcus, My Job Trackr">
+    <link rel="canonical" href="https://myjobtrackr.com/blogs/job-tracking-system/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://myjobtrackr.com/blogs/job-tracking-system/">
+    <meta property="og:title" content="Building a Job Tracking System That Actually Works | My Job Trackr">
+    <meta property="og:description" content="A job tracking system keeps your job search organised from first application to final offer. Here is how to build one — with app and spreadsheet options compared.">
+    <meta property="og:image" content="https://myjobtrackr.com/public/img/app/job-dashboard-2.png">
+    <meta property="og:site_name" content="My Job Trackr">
+    <meta property="article:published_time" content="2026-06-14">
+    <meta property="article:author" content="Marcus">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://myjobtrackr.com/blogs/job-tracking-system/">
+    <meta name="twitter:title" content="Building a Job Tracking System That Actually Works | My Job Trackr">
+    <meta name="twitter:description" content="A job tracking system keeps your job search organised from first application to final offer. Here is how to build one — with app and spreadsheet options compared.">
+    <meta name="twitter:image" content="https://myjobtrackr.com/public/img/app/job-dashboard-2.png">
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Building a Job Tracking System That Actually Works",
+            "description": "A job tracking system keeps your job search organised from first application to final offer. Here is how to build one — with app and spreadsheet options compared.",
+            "author": {
+                "@type": "Person",
+                "name": "Marcus",
+                "jobTitle": "Founder, My Job Trackr",
+                "url": "https://myjobtrackr.com/blogs/"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "My Job Trackr",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://myjobtrackr.com/public/img/my-job-trackr-logo-colour.png"
+                }
+            },
+            "datePublished": "2026-06-14",
+            "dateModified": "2026-06-14",
+            "image": "https://myjobtrackr.com/public/img/app/job-dashboard-2.png",
+            "mainEntityOfPage": "https://myjobtrackr.com/blogs/job-tracking-system/",
+            "keywords": "job tracking system, job search tracking software, online job tracking, track job applications, job tracking app",
+            "articleSection": "Job Search Advice",
+            "inLanguage": "en-GB",
+            "isPartOf": {
+                "@type": "Blog",
+                "name": "My Job Trackr Blog",
+                "url": "https://myjobtrackr.com/blogs/"
+            }
+        }
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is a job tracking system?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "A job tracking system is a method or tool for recording and monitoring every job application you submit during a job search. It typically includes details such as company name, role title, application date, current status, interview dates, and follow-up reminders. Job tracking systems range from simple spreadsheets to dedicated job tracking software like My Job Trackr."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is the best free job tracking software?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "My Job Trackr offers a free tier that allows you to track up to 3 job applications per month with no credit card required, available on web, iOS, and Android. For unlimited free tracking, Google Sheets is a flexible option though it lacks automated reminders, mobile-optimised views, and purpose-built job search features."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I set up a job tracking system?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "To set up a job tracking system: choose a tool (a spreadsheet or a dedicated app like My Job Trackr), define the data you will record for every application (company, role, date, status, follow-up date, job description), commit to updating it every time you apply or receive a response, and set reminders for follow-ups. A consistent system matters more than a perfect one."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is job search tracking software worth it?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, for active job seekers applying to more than 5 roles simultaneously. Dedicated job search tracking software handles reminders, mobile access, and status management automatically — saving hours of manual spreadsheet admin during a job search that typically lasts 3 to 4 months."
+                    }
+                }
+            ]
+        }
+    </script>
+
+    <!-- HowTo Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": "How to Set Up My Job Trackr as Your Job Tracking System",
+            "description": "Step-by-step guide to setting up My Job Trackr as your job search tracking system.",
+            "totalTime": "PT10M",
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "name": "Create your free account",
+                    "text": "Go to myjobtrackr.com and sign up for a free account. No credit card required. You can start tracking immediately.",
+                    "position": 1
+                },
+                {
+                    "@type": "HowToStep",
+                    "name": "Add your first application",
+                    "text": "Click 'Add Application' and either paste the job URL for Quick Import or manually enter the company name, job title, and application date.",
+                    "position": 2
+                },
+                {
+                    "@type": "HowToStep",
+                    "name": "Set a follow-up reminder",
+                    "text": "On each application, set a follow-up date 7 to 10 days after you applied. My Job Trackr will notify you when it is time to chase.",
+                    "position": 3
+                },
+                {
+                    "@type": "HowToStep",
+                    "name": "Update statuses as they change",
+                    "text": "Each time you hear back — whether it is an interview invite, rejection, or offer — update the application status. This keeps your dashboard accurate.",
+                    "position": 4
+                },
+                {
+                    "@type": "HowToStep",
+                    "name": "Review your dashboard weekly",
+                    "text": "Check your application overview each week to see what is pending, what needs a follow-up, and how your response rates are trending.",
+                    "position": 5
+                }
+            ]
+        }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://myjobtrackr.com"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Blog",
+                    "item": "https://myjobtrackr.com/blogs/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Building a Job Tracking System That Actually Works",
+                    "item": "https://myjobtrackr.com/blogs/job-tracking-system/"
+                }
+            ]
+        }
+    </script>
+
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../public/img/favicon/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="../../public/img/favicon/favicon.svg"/>
+    <link rel="shortcut icon" href="../../public/img/favicon/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../../public/img/favicon/apple-touch-icon.png"/>
+    <meta name="apple-mobile-web-app-title" content="My Job Trackr"/>
+    <link rel="manifest" href="../../public/img/favicon/site.webmanifest"/>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GHGPQTN4Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-2GHGPQTN4Y');
+    </script>
+
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, #f0f9ff 0%, #f0fdf4 100%);
+            padding: 60px 0 40px;
+        }
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+        }
+        .breadcrumb a { color: #2563eb; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { color: #64748b; }
+        .blog-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            color: #111827;
+        }
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        .blog-content {
+            padding: 60px 0 80px;
+            background: white;
+        }
+        .blog-content .container { max-width: 760px; }
+        .blog-content h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #111827;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        .blog-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #111827;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+        .blog-content p {
+            font-size: 1.05rem;
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .blog-content a { color: #2563eb; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+        .blog-content a:hover { color: #1d4ed8; }
+        .blog-content ul, .blog-content ol { margin-bottom: 20px; padding-left: 24px; }
+        .blog-content li { font-size: 1.05rem; color: #374151; line-height: 1.8; margin-bottom: 8px; }
+        .blog-content strong { color: #111827; font-weight: 600; }
+        .stat-highlight {
+            background: linear-gradient(135deg, #f0f9ff 0%, #f0fdf4 100%);
+            border-left: 4px solid #2563eb;
+            padding: 20px 24px;
+            border-radius: 0 8px 8px 0;
+            margin: 28px 0;
+        }
+        .stat-highlight p { margin-bottom: 0; font-weight: 500; color: #1e293b; }
+        .blog-cta {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 48px;
+        }
+        .blog-cta h3 { color: white; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; text-align: center; }
+        .blog-cta p { color: #bfdbfe; text-align: center; margin-bottom: 24px; }
+        .blog-cta .cta-buttons { display: flex; justify-content: center; }
+        .blog-cta .btn-white {
+            background: white;
+            color: #2563eb;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .blog-cta .btn-white:hover { background: #f3f4f6; transform: translateY(-2px); }
+        @media (max-width: 768px) {
+            .blog-hero h1 { font-size: 1.8rem; }
+            .blog-content h2 { font-size: 1.4rem; }
+            .blog-cta { padding: 28px 20px; }
+        }
+    </style>
+</head>
+<body>
+<div class="min-h-screen bg-gradient">
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="https://myjobtrackr.com" style="text-decoration: none;">
+                    <div class="nav-brand">
+                        <img src="../../public/img/my-job-trackr-logo-colour.png" alt="My Job Trackr Logo" class="logo">
+                        <span class="brand-text">My Job Trackr</span>
+                    </div>
+                </a>
+                <div class="nav-links">
+                    <a href="https://myjobtrackr.com/#features" class="nav-link">Features</a>
+                    <a href="https://myjobtrackr.com/#pricing" class="nav-link">Pricing</a>
+                    <a href="https://myjobtrackr.com/blogs/" class="nav-link">Blog</a>
+                    <a href="https://app.myjobtrackr.com/login" target="_blank">
+                        <button class="btn btn-white">Login</button>
+                    </a>
+                    <a href="https://app.myjobtrackr.com/register" target="_blank">
+                        <button class="btn btn-primary">Sign Up</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container" style="max-width: 760px;">
+            <div class="breadcrumb">
+                <a href="https://myjobtrackr.com">Home</a>
+                <span>/</span>
+                <a href="https://myjobtrackr.com/blogs/">Blog</a>
+                <span>/</span>
+                <span>Job Tracking System</span>
+            </div>
+            <h1>Building a Job Tracking System That Actually Works</h1>
+            <div class="blog-meta">
+                <span>Published 14 June 2026</span>
+                <span>&#183;</span>
+                <span>7 min read</span>
+            </div>
+            <div class="post-byline" style="display: flex; align-items: center; gap: 0.75rem; margin: 1rem 0 0;">
+                <div>
+                    <p style="font-size: 0.875rem; color: #374151; margin: 0;">
+                        By <strong>Marcus</strong> · Founder, My Job Trackr
+                    </p>
+                    <p style="font-size: 0.75rem; color: #9ca3af; margin: 0;">
+                        <time datetime="2026-06-14">Published: June 14, 2026</time>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <article class="blog-content">
+        <div class="container">
+
+            <p>
+                Most job seekers have a vague system: a few tabs open, some bookmarked roles, maybe a notes app with company names. That works for your first three applications. By application fifteen, it falls apart.
+            </p>
+
+            <p>
+                A proper <strong>job tracking system</strong> is not complicated — but it does need to be deliberate. This guide covers what a job tracking system actually is, what yours needs to include, and how to set one up whether you prefer a spreadsheet or dedicated job search tracking software.
+            </p>
+
+            <div class="stat-highlight">
+                <p>The average job search in the UK lasts 3 to 4 months. At 16 applications per week, that is potentially 200 roles to keep track of. Without a system, the admin alone becomes a second job.</p>
+            </div>
+
+            <h2>What is a Job Tracking System?</h2>
+
+            <p>
+                A job tracking system is a method or tool for recording and monitoring every job application you submit during a job search. It gives you one place to log company names, role titles, application dates, current statuses, interview dates, and follow-up reminders.
+            </p>
+
+            <p>
+                The goal is simple: never lose track of where you stand with any role. A consistent system means you follow up at the right time, prepare properly for interviews, and make informed decisions when offers arrive.
+            </p>
+
+            <p>
+                Job tracking systems range from simple spreadsheets to purpose-built <a href="https://myjobtrackr.com/">job search tracking software</a>. The right choice depends on how many applications you are managing simultaneously and how much time you want to spend on admin.
+            </p>
+
+            <h2>What Your System Needs to Include</h2>
+
+            <p>
+                Regardless of which tool you use, every job tracking system should capture the following for each application:
+            </p>
+
+            <ul>
+                <li><strong>Company name</strong> — who you applied to</li>
+                <li><strong>Role title</strong> — exact title from the job posting</li>
+                <li><strong>Date applied</strong> — not when you found it, when you submitted</li>
+                <li><strong>Current status</strong> — Applied / Interview / Offer / Rejected / Withdrawn</li>
+                <li><strong>Follow-up date</strong> — 7 to 10 days after applying</li>
+                <li><strong>Job description</strong> — copy it when you apply; postings disappear once a role is filled</li>
+                <li><strong>Interview dates and format</strong> — phone, video, or in-person</li>
+                <li><strong>Salary range</strong> — useful when comparing offers later</li>
+                <li><strong>Notes</strong> — anything specific from the job description or your research</li>
+            </ul>
+
+            <p>
+                This looks like a lot, but most of it takes under a minute per application if your system is set up correctly. The job description copy is the most important habit — without it, you will be scrambling to find context when a recruiter calls three weeks later.
+            </p>
+
+            <h2>Option 1: Spreadsheet-Based Tracking System</h2>
+
+            <p>
+                A spreadsheet job tracking system is free and requires no setup beyond creating a new sheet. Google Sheets or Excel both work. Here is a column structure that covers the essentials:
+            </p>
+
+            <ul>
+                <li>Column A: Company</li>
+                <li>Column B: Role title</li>
+                <li>Column C: Date applied</li>
+                <li>Column D: Status (use a dropdown)</li>
+                <li>Column E: Follow-up date</li>
+                <li>Column F: Job URL</li>
+                <li>Column G: Salary range</li>
+                <li>Column H: Notes</li>
+            </ul>
+
+            <p>
+                The spreadsheet approach is genuinely useful up to around 10 simultaneous applications. Past that, the limitations start to hurt: no push reminders, no mobile-optimised view, no auto-fill from job URLs, and no built-in offer comparison. You also have to build everything yourself — the system does not come pre-structured for a job search workflow.
+            </p>
+
+            <p>
+                For a full breakdown of when a spreadsheet works and when it does not, see our comparison: <a href="https://myjobtrackr.com/blogs/job-tracker-vs-spreadsheet/">spreadsheet vs dedicated software for job tracking</a>.
+            </p>
+
+            <h2>Option 2: Dedicated Job Tracking Software</h2>
+
+            <p>
+                Purpose-built job search tracking software handles the structural parts of a tracking system for you. The fields are already there, the reminders are built in, and the interface is designed for the job seeker workflow — not repurposed from a general-purpose tool.
+            </p>
+
+            <p>
+                <a href="https://myjobtrackr.com/">My Job Trackr's job tracking system</a> includes a centralised application dashboard, deadline reminders, interview scheduling, offer comparison, and native job search — across web, iOS, and Android. The free tier covers up to 3 applications per month. Pro plans start from £2.99/month for unlimited tracking.
+            </p>
+
+            <p>
+                The main advantages over a spreadsheet for active job seekers:
+            </p>
+
+            <ul>
+                <li>Automated follow-up reminders — set once, fire when needed</li>
+                <li>Mobile-native — update from your phone without fighting a spreadsheet interface</li>
+                <li>Quick Import — paste a job URL and the system fills in company name, title, and description automatically</li>
+                <li>Offer comparison — side-by-side view of salary, benefits, and role details when offers come in</li>
+                <li>Application analytics — see your application-to-interview ratio over time</li>
+            </ul>
+
+            <p>
+                See how it compares to other tools: <a href="https://myjobtrackr.com/blogs/my-job-trackr-vs-notion-for-job-tracking/">My Job Trackr vs Notion for job tracking</a>.
+            </p>
+
+            <h2>How to Set Up My Job Trackr as Your Tracking System</h2>
+
+            <ol>
+                <li>
+                    <strong>Create your free account.</strong> Go to <a href="https://app.myjobtrackr.com/register" target="_blank" rel="noopener">myjobtrackr.com</a> and sign up. No credit card required. You can start tracking immediately.
+                </li>
+                <li>
+                    <strong>Add your first application.</strong> Click 'Add Application' and either paste the job URL for Quick Import or manually enter the company name, job title, and application date. Add the job description in the notes field.
+                </li>
+                <li>
+                    <strong>Set a follow-up reminder.</strong> On each application, set a follow-up date 7 to 10 days after you applied. My Job Trackr notifies you when it is time to chase.
+                </li>
+                <li>
+                    <strong>Update statuses as they change.</strong> Each time you hear back — interview invite, rejection, or offer — update the application status. The dashboard gives you a live view of where everything stands.
+                </li>
+                <li>
+                    <strong>Review your dashboard weekly.</strong> Check your overview each week to see what is pending, what needs a follow-up, and how your response rate is trending. Adjust your approach based on the data.
+                </li>
+            </ol>
+
+            <p>
+                The whole setup takes under ten minutes. After that, maintaining it takes roughly a minute per application.
+            </p>
+
+            <h2>Keeping Your System Up to Date</h2>
+
+            <p>
+                The most common failure point in any job tracking system is inconsistency. People set it up well, then stop updating it after a week.
+            </p>
+
+            <p>
+                The fix is to make updating your tracker part of the application habit itself — not something you do later. Apply for a role, then immediately log it. Do not batch updates at the end of the week; by then you will have forgotten details and motivation to fill them in will be low.
+            </p>
+
+            <p>
+                A dedicated tracking app makes this easier than a spreadsheet because the mobile interface is fast enough to use between applying on your phone and putting it away. With a spreadsheet, the friction is high enough that updates get skipped.
+            </p>
+
+            <p>
+                For tips on keeping track when applying from your phone, see: <a href="https://myjobtrackr.com/blogs/track-job-applications-phone/">how to track job applications on your phone</a>.
+            </p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">What is a job tracking system?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">A job tracking system is a method or tool for recording and monitoring every job application you submit during a job search. It typically includes details such as company name, role title, application date, current status, interview dates, and follow-up reminders. Job tracking systems range from simple spreadsheets to dedicated job tracking software like My Job Trackr.</p>
+                </div>
+            </div>
+
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">What is the best free job tracking software?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">My Job Trackr offers a free tier that allows you to track up to 3 job applications per month with no credit card required, available on web, iOS, and Android. For unlimited free tracking, Google Sheets is a flexible option though it lacks automated reminders, mobile-optimised views, and purpose-built job search features.</p>
+                </div>
+            </div>
+
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">How do I set up a job tracking system?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">To set up a job tracking system: choose a tool (a spreadsheet or a dedicated app like My Job Trackr), define the data you will record for every application (company, role, date, status, follow-up date, job description), commit to updating it every time you apply or receive a response, and set reminders for follow-ups. A consistent system matters more than a perfect one.</p>
+                </div>
+            </div>
+
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Is job search tracking software worth it?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Yes, for active job seekers applying to more than 5 roles simultaneously. Dedicated job search tracking software handles reminders, mobile access, and status management automatically — saving hours of manual spreadsheet admin during a job search that typically lasts 3 to 4 months.</p>
+                </div>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="blog-cta">
+                <h3>Set Up Your Job Tracking System Today</h3>
+                <p>Free to start. Track applications, set follow-up reminders, and stay organised from first application to final offer.</p>
+                <div class="cta-buttons">
+                    <a href="https://app.myjobtrackr.com/register" target="_blank" class="btn-white">Start Tracking for Free</a>
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../../public/img/my-job-trackr-logo-colour.png" alt="My Job Trackr Logo" class="logo">
+                        <span class="brand-text">Job Trackr</span>
+                    </div>
+                    <p class="footer-description">
+                        The ultimate job search companion for recent graduates, job seekers, and career switchers.
+                    </p>
+                    <p class="footer-copyright">&copy; 2026 My Job Trackr. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-title">Product</h3>
+                    <ul class="footer-list">
+                        <li><a href="https://myjobtrackr.com/#features" class="footer-link">Features</a></li>
+                        <li><a href="https://myjobtrackr.com/#pricing" class="footer-link">Pricing</a></li>
+                    </ul>
+                    <h3 class="footer-title" style="margin-top: 1.5rem;">Blog</h3>
+                    <ul class="footer-list">
+                        <li><a href="https://myjobtrackr.com/blogs/" class="footer-link">All Posts</a></li>
+                        <li><a href="https://myjobtrackr.com/blogs/how-to-track-job-applications-effectively/" class="footer-link">Track Applications</a></li>
+                        <li><a href="https://myjobtrackr.com/blogs/job-tracking-system/" class="footer-link">Job Tracking System</a></li>
+                        <li><a href="https://myjobtrackr.com/blogs/job-search-tips-to-land-more-interviews/" class="footer-link">Land More Interviews</a></li>
+                        <li><a href="https://myjobtrackr.com/blogs/job-search-tools-every-job-seeker-needs/" class="footer-link">Job Search Tools</a></li>
+                        <li><a href="https://myjobtrackr.com/blogs/how-to-land-a-graduate-scheme/" class="footer-link">Graduate Schemes</a></li>
+                        <li><a href="https://myjobtrackr.com/blogs/uk-graduate-job-market-2026/" class="footer-link">UK Graduate Market</a></li>
+                    </ul>
+                    <h3 class="footer-title" style="margin-top: 1.5rem;">Compare</h3>
+                    <ul class="footer-list">
+                        <li><a href="https://myjobtrackr.com/compare/huntr-alternative-uk/" class="footer-link">Huntr Alternative UK</a></li>
+                        <li><a href="https://myjobtrackr.com/compare/teal-alternative-uk/" class="footer-link">Teal Alternative UK</a></li>
+                        <li><a href="https://myjobtrackr.com/compare/simplify-alternative-uk/" class="footer-link">Simplify Alternative UK</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-list">
+                        <li><a href="https://myjobtrackr.com/privacy" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="https://myjobtrackr.com/terms" class="footer-link">Terms of Service</a></li>
+                        <h3 class="footer-title">Get the App</h3>
+                        <a href="https://apps.apple.com/us/app/my-job-trackr/id6756327792"
+                           target="_blank"
+                           rel="noopener"
+                           style="display: block; margin-bottom: 8px;">
+                            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-gb?size=156x52"
+                                 alt="Download on the App Store"
+                                 style="border-radius: 8px; height: 52px;">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.myjobtrackr.mobileapp"
+                           target="_blank"
+                           rel="noopener"
+                           style="display: block;">
+                            <img src="https://play.google.com/intl/en_gb/badges/static/images/badges/en_badge_web_generic.png"
+                                 alt="Get it on Google Play"
+                                 style="border-radius: 8px; height: 52px;">
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
