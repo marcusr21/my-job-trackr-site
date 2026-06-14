@@ -67,9 +67,8 @@ jobs:
           PAYLOAD=$(jq -n \
             --arg host "myjobtrackr.com" \
             --arg key "$INDEXNOW_KEY" \
-            --arg keyLocation "$DOMAIN/$INDEXNOW_KEY.txt" \
             --argjson urlList "$(printf '%s\n' "${URLS[@]}" | jq -R . | jq -s .)" \
-            '{host: $host, key: $key, keyLocation: $keyLocation, urlList: $urlList}')
+            '{host: $host, key: $key, urlList: $urlList}')
 
           echo ""
           echo "Payload: $PAYLOAD"
