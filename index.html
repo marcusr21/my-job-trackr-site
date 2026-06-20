@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary SEO -->
-    <title>Job Tracker — Track Applications, Interviews & Offers | My Job Trackr</title>
+    <!-- CTR TEST started 2026-06-20: monitor homepage CTR for 3-4 weeks; revert if it drops below 0.87%. -->
+    <title>Job Tracker App — Track Every Application in One Place | My Job Trackr</title>
     <meta name="description" content="My Job Trackr is a job tracking app for UK job seekers. Track applications, manage interviews, compare offers and search for jobs — free to start, Pro from £2.99/month.">
     <meta name="keywords" content="job tracker, job tracking app, job application tracker UK, track job applications, graduate job tracker, interview tracker, career tracker, job search organiser, job tracker UK">
     <meta name="author" content="My Job Trackr">
@@ -21,7 +22,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://myjobtrackr.com/">
-    <meta property="og:title" content="Job Tracker — Track Applications, Interviews & Offers | My Job Trackr">
+    <meta property="og:title" content="Job Tracker App — Track Every Application in One Place | My Job Trackr">
     <meta property="og:description" content="My Job Trackr is a job tracking app for UK job seekers. Track applications, manage interviews, compare offers and search for jobs — free to start, Pro from £2.99/month.">
     <meta property="og:image" content="https://myjobtrackr.com/public/img/app/job-dashboard-2.png">
     <meta property="og:site_name" content="My Job Trackr">
@@ -29,100 +30,80 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://myjobtrackr.com/">
-    <meta name="twitter:title" content="Job Tracker — Track Applications, Interviews & Offers | My Job Trackr">
+    <meta name="twitter:title" content="Job Tracker App — Track Every Application in One Place | My Job Trackr">
     <meta name="twitter:description" content="My Job Trackr is a job tracking app for UK job seekers. Track applications, manage interviews, compare offers and search for jobs — free to start, Pro from £2.99/month.">
     <meta name="twitter:image" content="https://myjobtrackr.com/public/img/app/job-dashboard-2.png">
 
-    <!-- Organization Schema -->
+    <!-- Connected Entity Graph Schema -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "My Job Trackr",
-            "url": "https://myjobtrackr.com",
-            "logo": "https://myjobtrackr.com/public/img/my-job-trackr-logo-colour.png",
-            "description": "My Job Trackr is a job tracking application that helps job seekers organise and track job applications, manage interviews, and compare job offers in one centralised platform.",
-            "foundingDate": "2024",
-            "sameAs": [
-                "https://www.linkedin.com/company/my-job-trackr",
-                "https://www.instagram.com/myjobtrackr",
-                "https://www.tiktok.com/@myjobtrackr"
-            ],
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "Customer Support",
-                "email": "support@myjobtrackr.com"
-            }
-        }
-    </script>
-
-    <!-- SoftwareApplication Schema -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "My Job Trackr",
-            "alternateName": ["Job Trackr", "My Job Tracker", "Job Tracking App"],
-            "applicationCategory": "ProductivityApplication",
-            "applicationSubCategory": "Job Search Tool",
-            "keywords": "job tracking, job tracking app, job application tracking, track job applications, job tracker, interview tracking, career tracking, job search organiser",
-            "operatingSystem": ["Web", "iOS", "Android"],
-            "offers": [
-                {
-                    "@type": "Offer",
-                    "name": "Pro (Web)",
-                    "price": "2.99",
-                    "priceCurrency": "GBP",
-                    "availability": "https://schema.org/InStock",
-                    "url": "https://app.myjobtrackr.com/register"
-                },
-                {
-                    "@type": "Offer",
-                    "name": "Pro (iOS)",
-                    "price": "3.99",
-                    "priceCurrency": "GBP",
-                    "availability": "https://schema.org/InStock",
-                    "url": "https://apps.apple.com/us/app/my-job-trackr/id6756327792"
-                },
-                {
-                    "@type": "Offer",
-                    "name": "Pro (Android)",
-                    "price": "3.99",
-                    "priceCurrency": "GBP",
-                    "availability": "https://schema.org/InStock",
-                    "url": "https://play.google.com/store/apps/details?id=com.myjobtrackr.mobileapp"
-                }
-            ],
-            "description": "My Job Trackr is a job tracker app that allows users to track job applications, manage interviews, search for jobs, and compare offers. This job tracking software helps job seekers organise their entire job search in one centralised platform. Available on web, iOS, and Android.",
-            "url": "https://myjobtrackr.com",
-            "downloadUrl": [
-                "https://apps.apple.com/us/app/my-job-trackr/id6756327792",
-                "https://play.google.com/store/apps/details?id=com.myjobtrackr.mobileapp"
-            ],
-            "image": "https://myjobtrackr.com/public/img/app/job-dashboard.png",
-            "screenshot": [
-                "https://myjobtrackr.com/public/img/app/job-dashboard.png",
-                "https://myjobtrackr.com/public/img/app/job-table.png",
-                "https://myjobtrackr.com/public/img/app/job-create.png",
-                "https://myjobtrackr.com/public/img/app/job-search.png"
-            ],
-            "author": {
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
                 "@type": "Organization",
-                "name": "My Job Trackr"
+                "@id": "https://myjobtrackr.com/#organization",
+                "name": "My Job Trackr",
+                "url": "https://myjobtrackr.com/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://myjobtrackr.com/public/img/my-job-trackr-logo-colour.png"
+                },
+                "description": "My Job Trackr is a job tracking app that helps job seekers track applications, manage interviews, compare offers, and search for jobs in one place.",
+                "sameAs": [
+                    "https://www.instagram.com/myjobtrackr",
+                    "https://www.tiktok.com/@myjobtrackr",
+                    "https://www.linkedin.com/company/my-job-trackr"
+                ]
             },
-            "featureList": [
-                "Native job search integration",
-                "Track unlimited job applications",
-                "Interview calendar management",
-                "Job offer comparison tool",
-                "Quick Import from job URLs",
-                "Application status tracking",
-                "Deadline reminders",
-                "Detailed job notes"
-            ],
-            "softwareVersion": "1.0",
-            "releaseNotes": "Track your job search with native job searching, application tracking, interview management, and offer comparison."
-        }
+            {
+                "@type": "WebSite",
+                "@id": "https://myjobtrackr.com/#website",
+                "url": "https://myjobtrackr.com/",
+                "name": "My Job Trackr",
+                "publisher": { "@id": "https://myjobtrackr.com/#organization" },
+                "inLanguage": "en-GB"
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": "https://myjobtrackr.com/#app",
+                "name": "My Job Trackr",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Web, iOS, Android",
+                "description": "A job tracking app for job seekers to track applications, manage interviews, compare job offers side by side, and search for jobs natively. Available on web, iOS and Android.",
+                "offers": [
+                    {
+                        "@type": "Offer",
+                        "name": "Free",
+                        "price": "0",
+                        "priceCurrency": "GBP",
+                        "description": "Track up to 3 job applications per month. No credit card required."
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Pro (Web)",
+                        "price": "2.99",
+                        "priceCurrency": "GBP",
+                        "description": "Unlimited job tracking on web."
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Pro (App Stores)",
+                        "price": "3.99",
+                        "priceCurrency": "GBP",
+                        "description": "Unlimited job tracking via iOS App Store and Google Play."
+                    }
+                ],
+                "featureList": [
+                    "Job application tracking",
+                    "Interview management",
+                    "Side-by-side offer comparison",
+                    "Native job search",
+                    "Quick Import from Reed, Glassdoor and Totaljobs"
+                ],
+                "publisher": { "@id": "https://myjobtrackr.com/#organization" }
+            }
+        ]
+    }
     </script>
 
     <!-- FAQPage Schema - CRITICAL FOR AI -->
@@ -328,6 +309,7 @@
                     <a href="#features" class="nav-link">Features</a>
                     <a href="#pricing" class="nav-link">Pricing</a>
                     <a href="/blogs/" class="nav-link">Blog</a>
+                    <a href="/job-tracking/" class="nav-link">Job Tracking</a>
                     <a href="https://app.myjobtrackr.com/login" target="_blank" rel="noopener">
                         <button class="btn btn-white">Login</button>
                     </a>
@@ -389,7 +371,7 @@
                 <h2 class="section-title">What is Job Tracking?</h2>
                 <div class="what-is-text">
                     <p>
-                        <strong>Job tracking</strong> is the process of recording and monitoring every job application you submit during your job search. A job tracking system gives you one centralised place to log company names, job titles, application dates, interview schedules, and offer details — so nothing falls through the cracks.
+                        <strong>Job tracking</strong> is the process of recording and monitoring every job application you submit during your job search. A job tracking system gives you one centralised place to log company names, job titles, application dates, interview schedules, and offer details — so nothing falls through the cracks. Read our <a href="/job-tracking/" class="text-blue">complete job tracking guide</a> for everything you need to know.
                     </p>
                     <p>
                         <strong>My Job Trackr</strong> is a job tracking app purpose-built for this. It replaces scattered spreadsheets and browser bookmarks with a single dashboard where job seekers can <a href="#features" class="text-blue">track applications</a>, manage interviews, set deadline reminders, and compare offers side-by-side. The app also includes native job search, so you can find and track opportunities without switching between platforms.
@@ -1137,11 +1119,17 @@
                         <li><a href="#features" class="footer-link">Features</a></li>
                         <li><a href="#pricing" class="footer-link">Pricing</a></li>
                     </ul>
+                    <h3 class="footer-title" style="margin-top: 1.5rem;">Job Tracking</h3>
+                    <ul class="footer-list">
+                        <li><a href="https://myjobtrackr.com/job-tracking/" class="footer-link">Complete Guide</a></li>
+                        <li><a href="https://myjobtrackr.com/blogs/what-is-job-tracking/" class="footer-link">What Is Job Tracking?</a></li>
+                        <li><a href="https://myjobtrackr.com/blogs/job-tracking-without-spreadsheets/" class="footer-link">Without Spreadsheets</a></li>
+                        <li><a href="https://myjobtrackr.com/blogs/job-tracking-system/" class="footer-link">Job Tracking System</a></li>
+                    </ul>
                     <h3 class="footer-title" style="margin-top: 1.5rem;">Blog</h3>
                     <ul class="footer-list">
                         <li><a href="https://myjobtrackr.com/blogs/" class="footer-link">All Posts</a></li>
                         <li><a href="https://myjobtrackr.com/blogs/how-to-track-job-applications-effectively/" class="footer-link">Track Applications</a></li>
-                        <li><a href="https://myjobtrackr.com/blogs/job-tracking-system/" class="footer-link">Job Tracking System</a></li>
                         <li><a href="https://myjobtrackr.com/blogs/job-search-tips-to-land-more-interviews/" class="footer-link">Land More Interviews</a></li>
                         <li><a href="https://myjobtrackr.com/blogs/how-to-manage-your-job-search-from-your-phone/" class="footer-link">Mobile Job Search</a></li>
                         <li><a href="https://myjobtrackr.com/blogs/job-search-tools-every-job-seeker-needs/" class="footer-link">Job Search Tools</a></li>
