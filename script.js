@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (revealEls.length && !prefersReducedMotion && 'IntersectionObserver' in window) {
         document.querySelectorAll('.reveal-stagger').forEach(function (group) {
             Array.from(group.children).forEach(function (child, i) {
-                child.style.setProperty('--reveal-index', i);
+                child.style.setProperty('--reveal-index', Math.min(i, 6));
             });
         });
         const revealObserver = new IntersectionObserver(function (entries, obs) {
