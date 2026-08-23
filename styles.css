@@ -1585,6 +1585,22 @@ body.-sticky-cta-shown {
     margin: 2rem auto;
     max-width: 320px;
 }
+.v2-pillar-hero-spine {
+    max-width: 480px;
+    margin-top: 2rem;
+}
+.related-posts {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--bone-300);
+}
+.data-callout {
+    background: var(--bone-200);
+    border-left: 3px solid var(--persimmon-500);
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: var(--radius-sm);
+}
 
 /* =============================================================================
    LEGACY (pre-redesign) — retained until pages are migrated in Phase 3.
