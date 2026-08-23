@@ -95,18 +95,22 @@ document.addEventListener('DOMContentLoaded', function () {
             if (heroSentinel && 'IntersectionObserver' in window) {
                 const barObserver = new IntersectionObserver(function (entries) {
                     entries.forEach(function (entry) {
-                        stickyCta.classList.toggle('-shown', !entry.isIntersecting);
+                        const shown = !entry.isIntersecting;
+                        stickyCta.classList.toggle('-shown', shown);
+                        document.body.classList.toggle('-sticky-cta-shown', shown);
                     });
                 }, { threshold: 0 });
                 barObserver.observe(heroSentinel);
             } else {
                 stickyCta.classList.add('-shown');
+                document.body.classList.add('-sticky-cta-shown');
             }
         }
         const dismissBtn = document.getElementById('sticky-cta-dismiss');
         if (dismissBtn) {
             dismissBtn.addEventListener('click', function () {
                 stickyCta.classList.remove('-shown', '-visible');
+                document.body.classList.remove('-sticky-cta-shown');
                 sessionStorage.setItem('sticky-cta-dismissed', '1');
             });
         }
