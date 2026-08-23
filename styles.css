@@ -170,7 +170,7 @@
 /* ---- Components (§3.3) ---- */
 
 /* Primary button */
-.btn-primary {
+.v2-btn-primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -188,13 +188,13 @@
     text-decoration: none;
     transition: background-color 150ms var(--ease);
 }
-.btn-primary:hover {
+.v2-btn-primary:hover {
     background: var(--persimmon-700);
 }
-.btn-primary:active {
+.v2-btn-primary:active {
     background: var(--persimmon-900);
 }
-.btn-primary:focus-visible {
+.v2-btn-primary:focus-visible {
     outline: 2px solid var(--persimmon-500);
     outline-offset: 2px;
 }
@@ -229,15 +229,15 @@
 }
 
 /* Card */
-.card {
+.v2-card {
     background: var(--bone-200);
     border: 1px solid var(--bone-300);
     border-radius: var(--radius-lg);
 }
-.card-interactive {
+.v2-card-interactive {
     transition: border-color 150ms var(--ease), transform 150ms var(--ease);
 }
-.card-interactive:hover {
+.v2-card-interactive:hover {
     border-color: var(--ink-500);
     transform: translateY(-2px);
 }
@@ -289,7 +289,7 @@
 .section-dark a:hover {
     color: var(--bone-100);
 }
-.section-dark .btn-primary {
+.section-dark .v2-btn-primary {
     background: var(--persimmon-500);
     color: #ffffff;
 }
@@ -402,7 +402,7 @@
     50%       { opacity: 0.7; transform: scale(1.15); }
 }
 
-/* ---- Vignette shells (§7) — full detail built in Phase 1's preview/components.html ---- */
+/* ---- Vignette shells (§7) — built out in Phase 1's preview/components.html ---- */
 .vg-board,
 .vg-quickadd,
 .vg-calendar,
@@ -412,6 +412,241 @@
     border: 1px solid var(--bone-300);
     border-radius: var(--radius-lg);
     padding: 1.25rem;
+}
+
+/* vg-board: hero dashboard, 4 stage columns, one card travels between them */
+.vg-board-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+}
+.vg-board-col {
+    background: var(--bone-100);
+    border: 1px solid var(--bone-300);
+    border-radius: var(--radius-md);
+    padding: 0.75rem;
+    min-height: 140px;
+    position: relative;
+}
+.vg-board-col-label {
+    font-size: var(--text-2xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-500);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.vg-board-card {
+    background: var(--bone-100);
+    border: 1px solid var(--bone-300);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.625rem;
+    font-size: var(--text-2xs);
+    font-weight: 600;
+    color: var(--ink-900);
+}
+.vg-board-traveler {
+    position: absolute;
+    left: 0.75rem;
+    right: 0.75rem;
+    top: 2.25rem;
+    background: var(--bone-50);
+    border: 1px solid var(--persimmon-500);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.625rem;
+    font-size: var(--text-2xs);
+    font-weight: 600;
+    color: var(--ink-900);
+    animation: vg-board-travel 14s infinite;
+}
+.vg-board-toast {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    background: var(--ink-900);
+    color: var(--bone-100);
+    border-radius: var(--radius-sm);
+    padding: 0.375rem 0.5rem;
+    font-size: var(--text-2xs);
+    opacity: 0;
+    animation: vg-board-toast 14s infinite;
+}
+@keyframes vg-board-travel {
+    0%, 16%   { transform: translateX(0); }
+    25%, 41%  { transform: translateX(100%); }
+    50%, 66%  { transform: translateX(200%); }
+    75%, 91%  { transform: translateX(300%); }
+    100%      { transform: translateX(0); }
+}
+@keyframes vg-board-toast {
+    0%, 50%, 100% { opacity: 0; }
+    54%, 63%      { opacity: 1; }
+}
+
+/* vg-quickadd: URL paste -> auto-filled fields -> save pulse */
+.vg-quickadd-url {
+    background: var(--bone-100);
+    border: 1px solid var(--bone-300);
+    border-radius: var(--radius-pill);
+    padding: 0.625rem 1rem;
+    font-size: var(--text-xs);
+    color: var(--ink-500);
+    margin-bottom: 0.75rem;
+}
+.vg-quickadd-fields {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+.vg-quickadd-field {
+    background: var(--bone-100);
+    border: 1px solid var(--bone-300);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.75rem;
+    font-size: var(--text-xs);
+    color: var(--ink-900);
+}
+.vg-quickadd-field .label {
+    display: block;
+    font-size: var(--text-2xs);
+    color: var(--ink-500);
+    margin-bottom: 0.125rem;
+}
+.vg-quickadd-save {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    background: var(--persimmon-500);
+    color: #fff;
+    border-radius: var(--radius-md);
+    padding: 0.5rem 1rem;
+    font-size: var(--text-xs);
+    font-weight: 600;
+}
+.vg-quickadd-save.-pulse {
+    animation: vg-quickadd-pulse 2.4s ease-in-out infinite;
+}
+@keyframes vg-quickadd-pulse {
+    0%, 100% { transform: scale(1); }
+    10%       { transform: scale(1.05); }
+    20%       { transform: scale(1); }
+}
+
+/* vg-calendar: interview week strip */
+.vg-calendar-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.375rem;
+    margin-bottom: 0.75rem;
+}
+.vg-calendar-day {
+    background: var(--bone-100);
+    border: 1px solid var(--bone-300);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.25rem;
+    text-align: center;
+    font-size: var(--text-2xs);
+    color: var(--ink-500);
+}
+.vg-calendar-day.-active {
+    background: var(--persimmon-50);
+    border-color: var(--persimmon-500);
+    color: var(--persimmon-700);
+    font-weight: 700;
+}
+.vg-calendar-event {
+    background: var(--bone-100);
+    border: 1px solid var(--bone-300);
+    border-left: 3px solid var(--persimmon-500);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.75rem;
+    font-size: var(--text-xs);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.vg-calendar-event .time {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-500);
+    font-size: var(--text-2xs);
+}
+
+/* vg-offers: side-by-side compact offer cards */
+.vg-offers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+.vg-offers-card {
+    background: var(--bone-100);
+    border: 1px solid var(--bone-300);
+    border-radius: var(--radius-md);
+    padding: 0.75rem;
+}
+.vg-offers-card .company {
+    font-weight: 600;
+    font-size: var(--text-xs);
+    color: var(--ink-900);
+}
+.vg-offers-card .role {
+    font-size: var(--text-2xs);
+    color: var(--ink-500);
+    margin-bottom: 0.5rem;
+}
+.vg-offers-card .salary {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    font-size: var(--text-sm);
+    color: var(--ink-900);
+}
+.vg-offers-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: var(--jade-100);
+    color: var(--jade-500);
+    font-size: var(--text-2xs);
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    padding: 0.125rem 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* vg-list: application rows with compact spine */
+.vg-list-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.625rem 0;
+    border-bottom: 1px solid var(--bone-300);
+}
+.vg-list-row:last-child {
+    border-bottom: none;
+}
+.vg-list-row.-flagged {
+    background: var(--persimmon-50);
+    margin: 0 -0.5rem;
+    padding: 0.625rem 0.5rem;
+    border-radius: var(--radius-sm);
+    border-bottom: none;
+}
+.vg-list-row-main .company {
+    font-weight: 600;
+    font-size: var(--text-xs);
+    color: var(--ink-900);
+}
+.vg-list-row-main .role {
+    font-size: var(--text-2xs);
+    color: var(--ink-500);
+}
+.vg-list-row .spine.-compact {
+    width: 120px;
+    margin-top: 0.25rem;
 }
 
 /* ---- Layout partials: nav / footer / cta-band / sticky-cta (§4.1) ---- */
@@ -635,6 +870,17 @@
     }
     .sticky-cta {
         transition: none;
+    }
+    .vg-board-traveler {
+        animation: none;
+        transform: translateX(300%); /* Offer end-state, per §5.4 */
+    }
+    .vg-board-toast {
+        animation: none;
+        opacity: 0;
+    }
+    .vg-quickadd-save.-pulse {
+        animation: none;
     }
     .v2 * {
         animation-duration: 0.01ms !important;
