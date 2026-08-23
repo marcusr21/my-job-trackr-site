@@ -1,4 +1,651 @@
 
+/* =============================================================================
+   V2 DESIGN SYSTEM — REDESIGN_PLAN.md
+   Tokens -> fonts -> reset/base -> components -> vignette shells -> motion.
+   Legacy rules below this block stay in place until each page is migrated in
+   Phase 3 (see REDESIGN_PLAN.md §10) — do not delete them yet.
+   ============================================================================= */
+
+:root {
+    /* Brand — Persimmon (CTAs/actions ONLY) */
+    --persimmon-50: #FFF1EE;
+    --persimmon-100: #FFD9D2;
+    --persimmon-300: #F89589;
+    --persimmon-500: #F25A4A;
+    --persimmon-700: #DD3D2C;
+    --persimmon-900: #8F2418;
+    /* Warm neutrals — Bone */
+    --bone-50: #FFFBF5;
+    --bone-100: #FAF6F0; /* page bg */
+    --bone-200: #F0EAE1; /* cards */
+    --bone-300: #E2DACE; /* borders */
+    /* Ink — text */
+    --ink-500: #5A4B3F;
+    --ink-700: #2C231B;
+    --ink-900: #18120E;
+    /* Status — never persimmon for status */
+    --jade-100: #DAF1E6;
+    --jade-500: #0F8C5F;
+    --amber-100: #F6E9CF;
+    --amber-500: #C68A2E;
+    /* Shape */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-pill: 9999px;
+    /* Type scale: 12/14/16/20/28/40/56px */
+    --text-2xs: .75rem;
+    --text-xs: .875rem;
+    --text-sm: 1rem;
+    --text-md: 1.25rem;
+    --text-lg: 1.75rem;
+    --text-xl: 2.5rem;
+    --text-2xl: 3.5rem;
+    --font-display: 'Geist', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Geist', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Fonts (self-hosted, see /public/fonts/) ---- */
+@font-face {
+    font-family: 'Geist';
+    src: url('/public/fonts/geist/Geist-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Geist';
+    src: url('/public/fonts/geist/Geist-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Geist';
+    src: url('/public/fonts/geist/Geist-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Geist';
+    src: url('/public/fonts/geist/Geist-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/public/fonts/jetbrains-mono/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/public/fonts/jetbrains-mono/JetBrainsMono-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/public/fonts/jetbrains-mono/JetBrainsMono-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ---- Reset / base ---- */
+.v2 *,
+.v2 *::before,
+.v2 *::after {
+    box-sizing: border-box;
+}
+
+.v2 {
+    background: var(--bone-100);
+    color: var(--ink-900);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.v2 h1,
+.v2 h2,
+.v2 h3,
+.v2 h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--ink-900);
+}
+
+.v2 h1 {
+    font-size: var(--text-xl);
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+}
+@media (min-width: 768px) {
+    .v2 h1 {
+        font-size: var(--text-2xl);
+    }
+}
+
+.v2 h2 {
+    font-size: var(--text-lg);
+}
+@media (min-width: 768px) {
+    .v2 h2 {
+        font-size: var(--text-xl);
+    }
+}
+
+.v2 p {
+    color: var(--ink-900);
+}
+
+.text-secondary {
+    color: var(--ink-500);
+}
+
+.container-v2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.article-measure {
+    max-width: 68ch;
+}
+
+.v2 :focus-visible {
+    outline: 2px solid var(--persimmon-500);
+    outline-offset: 2px;
+}
+
+/* ---- Components (§3.3) ---- */
+
+/* Primary button */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 48px;
+    padding: 0 1.5rem;
+    border-radius: var(--radius-md);
+    background: var(--persimmon-500);
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 150ms var(--ease);
+}
+.btn-primary:hover {
+    background: var(--persimmon-700);
+}
+.btn-primary:active {
+    background: var(--persimmon-900);
+}
+.btn-primary:focus-visible {
+    outline: 2px solid var(--persimmon-500);
+    outline-offset: 2px;
+}
+/* If Lighthouse a11y flags white-on-persimmon-500 contrast, escalate this
+   rule's background to --persimmon-700 rather than changing the text colour. */
+
+/* Ghost button */
+.btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 48px;
+    padding: 0 1.5rem;
+    border-radius: var(--radius-md);
+    background: transparent;
+    color: var(--ink-900);
+    border: 1px solid var(--ink-900);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 150ms var(--ease);
+}
+.btn-ghost:hover {
+    background: var(--bone-200);
+}
+.btn-ghost:focus-visible {
+    outline: 2px solid var(--ink-900);
+    outline-offset: 2px;
+}
+
+/* Card */
+.card {
+    background: var(--bone-200);
+    border: 1px solid var(--bone-300);
+    border-radius: var(--radius-lg);
+}
+.card-interactive {
+    transition: border-color 150ms var(--ease), transform 150ms var(--ease);
+}
+.card-interactive:hover {
+    border-color: var(--ink-500);
+    transform: translateY(-2px);
+}
+
+/* Eyebrow / section header */
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-transform: uppercase;
+    font-size: var(--text-2xs);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--ink-500);
+}
+.eyebrow::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--bone-300);
+}
+
+/* Stat numerals */
+.stat-numeral {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Status glyphs — never persimmon */
+.status-jade {
+    color: var(--jade-500);
+}
+.status-amber {
+    color: var(--amber-500);
+}
+.status-ink {
+    color: var(--ink-500);
+}
+
+/* Dark sections (stat band, final CTA, footer) */
+.section-dark {
+    background: var(--ink-900);
+    color: var(--bone-100);
+}
+.section-dark a {
+    color: rgba(250, 246, 240, 0.8);
+    text-decoration: none;
+}
+.section-dark a:hover {
+    color: var(--bone-100);
+}
+.section-dark .btn-primary {
+    background: var(--persimmon-500);
+    color: #ffffff;
+}
+
+/* ---- Stage Spine (§3.4) — matches the real app's <x-v2.stage-spine> ----
+   Verified 2026-08-23 against job-trackr/resources/views/components/v2/stage-spine.blade.php:
+   stage labels are custom/variable-length (not a fixed 4-stage enum), and the
+   current-stage dot stays persimmon at every stage including the terminal one
+   — there is no jade completion glow in the real component. */
+.spine {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.spine.-vertical {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+}
+.spine-stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+.spine.-vertical .spine-stage {
+    flex-direction: row;
+    align-items: flex-start;
+    flex: none;
+}
+.spine-stage:last-child {
+    flex: none;
+}
+.spine-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--ink-900);
+    flex-shrink: 0;
+}
+.spine-stage.-future .spine-dot {
+    background: var(--bone-100);
+    border: 2px solid var(--bone-300);
+}
+.spine-stage.-current .spine-dot-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.spine-stage.-current .spine-dot {
+    background: var(--persimmon-500);
+    position: relative;
+    z-index: 1;
+}
+.spine-stage.-current .spine-pulse-halo {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--persimmon-100);
+    animation: v2-persimmon-pulse 2s ease-in-out infinite;
+}
+.spine-connector {
+    flex: 1;
+    height: 1px;
+    background: var(--bone-300);
+    margin: 0 0.25rem;
+}
+.spine-stage.-past + .spine-connector,
+.spine-connector.-past {
+    background: var(--ink-900);
+}
+.spine.-vertical .spine-connector {
+    width: 1px;
+    height: 100%;
+    min-height: 24px;
+    margin: 0.25rem 0;
+}
+.spine-label {
+    margin-top: 0.5rem;
+    font-size: var(--text-2xs);
+    font-weight: 500;
+    white-space: nowrap;
+    color: var(--ink-700);
+}
+.spine-stage.-current .spine-label {
+    color: var(--persimmon-500);
+}
+.spine-stage.-future .spine-label {
+    color: var(--ink-500);
+    opacity: 0.6;
+}
+.spine.-compact .spine-label {
+    display: none;
+}
+.spine.-compact .spine-dot,
+.spine.-compact .spine-pulse-halo {
+    width: 8px;
+    height: 8px;
+}
+.spine.-compact .spine-stage.-current .spine-pulse-halo {
+    width: 14px;
+    height: 14px;
+}
+
+@keyframes v2-persimmon-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.7; transform: scale(1.15); }
+}
+
+/* ---- Vignette shells (§7) — full detail built in Phase 1's preview/components.html ---- */
+.vg-board,
+.vg-quickadd,
+.vg-calendar,
+.vg-offers,
+.vg-list {
+    background: var(--bone-200);
+    border: 1px solid var(--bone-300);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+}
+
+/* ---- Layout partials: nav / footer / cta-band / sticky-cta (§4.1) ---- */
+.v2-nav {
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    background: rgba(250, 246, 240, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+.v2-nav.-scrolled {
+    border-bottom: 1px solid var(--bone-300);
+}
+.v2-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+}
+.v2-nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--ink-900);
+    text-decoration: none;
+}
+.v2-nav-links {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+}
+.v2-nav-links a {
+    color: var(--ink-700);
+    text-decoration: none;
+    font-size: var(--text-xs);
+    font-weight: 500;
+}
+.v2-nav-links a:hover {
+    color: var(--ink-900);
+}
+@media (min-width: 768px) {
+    .v2-nav-links {
+        display: flex;
+    }
+}
+.v2-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.v2-nav-login {
+    color: var(--ink-700);
+    text-decoration: none;
+    font-size: var(--text-xs);
+    font-weight: 500;
+    display: none;
+}
+@media (min-width: 640px) {
+    .v2-nav-login {
+        display: inline;
+    }
+}
+.v2-nav-cta {
+    min-height: 40px;
+    padding: 0 1.25rem;
+}
+
+.v2-footer {
+    padding: 3rem 0;
+}
+.v2-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .v2-footer-grid {
+        grid-template-columns: 1.5fr repeat(5, 1fr);
+    }
+}
+.v2-footer-brand {
+    grid-column: 1 / -1;
+}
+@media (min-width: 768px) {
+    .v2-footer-brand {
+        grid-column: auto;
+    }
+}
+.v2-footer-brand p {
+    color: rgba(250, 246, 240, 0.8);
+    font-size: var(--text-xs);
+    margin: 0.75rem 0;
+    max-width: 32ch;
+}
+.v2-footer-copyright {
+    color: rgba(250, 246, 240, 0.6) !important;
+    font-size: var(--text-2xs) !important;
+}
+.v2-footer-col h3 {
+    font-size: var(--text-2xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--bone-100);
+}
+.v2-footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.v2-footer-badge {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.v2-footer-badge img {
+    border-radius: var(--radius-sm);
+}
+
+.v2-cta-band {
+    padding: 4rem 0;
+    text-align: center;
+}
+.v2-cta-band-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.v2-cta-band h2 {
+    color: var(--bone-100);
+}
+.v2-cta-band-badges {
+    display: flex;
+    gap: 1rem;
+}
+.v2-cta-band-note {
+    color: rgba(250, 246, 240, 0.7);
+    font-size: var(--text-xs);
+}
+
+.sticky-cta-badges {
+    display: flex;
+    gap: 0.75rem;
+}
+.sticky-cta-badges a {
+    color: var(--ink-900);
+    display: inline-flex;
+}
+.sticky-cta-dismiss {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: var(--ink-500);
+    cursor: pointer;
+    min-width: 48px;
+    min-height: 48px;
+}
+
+/* ---- Motion: reveal engine (§5.1) ---- */
+.reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 500ms var(--ease), transform 500ms var(--ease);
+}
+.reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+}
+.reveal-stagger > * {
+    transition-delay: calc(var(--reveal-index, 0) * 80ms);
+}
+
+/* ---- Motion: sticky mobile CTA bar (§5.3) ---- */
+.sticky-cta {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 70;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+    background: var(--bone-100);
+    border-top: 1px solid var(--bone-300);
+    transform: translateY(100%);
+    transition: transform 250ms var(--ease);
+}
+.sticky-cta.-visible {
+    display: flex;
+}
+.sticky-cta.-shown {
+    transform: translateY(0);
+}
+@media (min-width: 769px) {
+    .sticky-cta {
+        display: none !important;
+    }
+}
+
+/* ---- Reduced motion (§5, §10 Phase 4 gate) ----
+   Every animation must resolve to a complete, correct static state. */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+    .spine-pulse-halo {
+        animation: none !important;
+    }
+    .sticky-cta {
+        transition: none;
+    }
+    .v2 * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* =============================================================================
+   LEGACY (pre-redesign) — retained until pages are migrated in Phase 3.
+   ============================================================================= */
+
 /* Reset and base styles */
 * {
     margin: 0;
