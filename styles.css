@@ -896,6 +896,15 @@ body.-sticky-cta-shown {
     .vg-quickadd-save.-pulse {
         animation: none;
     }
+    .v2-journey-beat,
+    .v2-journey-beat .vg-quickadd,
+    .v2-journey-beat .vg-list,
+    .v2-journey-beat .vg-calendar,
+    .v2-journey-beat .vg-offers {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
     .v2 * {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
@@ -1089,6 +1098,34 @@ body.-sticky-cta-shown {
     font-weight: 600;
     font-size: var(--text-md);
     margin-bottom: 1rem;
+}
+
+/* Scroll-driven enhancement (§5.2) — Chrome/Edge get native scroll-linked
+   entrance + subtle vignette parallax; the IO-driven .reveal/-active-beat
+   system in script.js is the baseline everywhere else, not a fallback for
+   this to degrade into — it already is the full experience on its own. */
+@supports (animation-timeline: view()) {
+    @keyframes v2-journey-beat-reveal {
+        from { opacity: 0.35; transform: translateY(28px) scale(0.98); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .v2-journey-beat {
+        animation: v2-journey-beat-reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 35%;
+    }
+    @keyframes v2-vignette-parallax {
+        from { transform: translateY(10px); }
+        to { transform: translateY(-10px); }
+    }
+    .v2-journey-beat .vg-quickadd,
+    .v2-journey-beat .vg-list,
+    .v2-journey-beat .vg-calendar,
+    .v2-journey-beat .vg-offers {
+        animation: v2-vignette-parallax linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 100%;
+    }
 }
 
 /* Compare */
