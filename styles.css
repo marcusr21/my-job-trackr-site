@@ -1206,6 +1206,97 @@ body.-sticky-cta-shown {
     margin-top: 0.25rem;
 }
 
+/* ---- Blog post template (§8.2) ---- */
+.v2-blog-hero {
+    padding: 3rem 0 2rem;
+}
+.v2-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--text-xs);
+    color: var(--ink-500);
+    margin-bottom: 1.5rem;
+}
+.v2-breadcrumb a {
+    color: var(--ink-500);
+    text-decoration: none;
+}
+.v2-breadcrumb a:hover {
+    text-decoration: underline;
+}
+.v2-blog-hero h1 {
+    font-size: var(--text-lg);
+    margin-bottom: 0.75rem;
+}
+@media (min-width: 768px) {
+    .v2-blog-hero h1 {
+        font-size: var(--text-xl);
+    }
+}
+.v2-blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--ink-500);
+    font-size: var(--text-xs);
+}
+.v2-blog-byline {
+    margin-top: 1rem;
+    font-size: var(--text-xs);
+    color: var(--ink-700);
+}
+.v2-blog-byline .v2-blog-byline-date {
+    display: block;
+    font-size: var(--text-2xs);
+    color: var(--ink-500);
+}
+
+.v2-article h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--ink-900);
+}
+.v2-article h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-md);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--ink-900);
+}
+.v2-article p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--ink-700);
+    margin-bottom: 1.25rem;
+}
+.v2-article a {
+    color: var(--persimmon-700);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+.v2-article a:hover {
+    color: var(--persimmon-900);
+}
+.v2-article ul,
+.v2-article ol {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+}
+.v2-article li {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--ink-700);
+    margin-bottom: 0.5rem;
+}
+.v2-article strong {
+    color: var(--ink-900);
+    font-weight: 600;
+}
+
 /* =============================================================================
    LEGACY (pre-redesign) — retained until pages are migrated in Phase 3.
    ============================================================================= */
