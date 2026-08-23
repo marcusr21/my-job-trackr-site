@@ -1555,6 +1555,37 @@ body.-sticky-cta-shown {
     }
 }
 
+/* ---- 404 page (§8.7) ---- */
+.v2-404 {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    text-align: center;
+}
+.v2-404-inner {
+    max-width: 480px;
+    margin: 0 auto;
+}
+.v2-404-code {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: var(--text-2xl);
+    color: var(--persimmon-500);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.v2-404-message {
+    font-size: var(--text-md);
+    color: var(--ink-700);
+    margin-bottom: 2rem;
+}
+.v2-404-spine {
+    margin: 2rem auto;
+    max-width: 320px;
+}
+
 /* =============================================================================
    LEGACY (pre-redesign) — retained until pages are migrated in Phase 3.
    ============================================================================= */
