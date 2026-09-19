@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Component Preview — My Job Trackr V2</title>
+<link rel="stylesheet" href="/styles.css">
+<style>
+    .preview-section { padding: 3rem 0; border-bottom: 1px solid var(--bone-300); }
+    .preview-label { font-size: var(--text-2xs); text-transform: uppercase; letter-spacing: .1em; color: var(--ink-500); margin-bottom: 1rem; }
+    .preview-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-start; }
+    .preview-dark-wrap { background: var(--ink-900); padding: 2rem; border-radius: var(--radius-lg); }
+</style>
+</head>
+<body class="v2">
+
+<div class="container-v2">
+
+    <section class="preview-section">
+        <h1>Component Preview</h1>
+        <p class="text-secondary">Internal reference only — not linked, not in sitemap.xml.</p>
+    </section>
+
+    <!-- Buttons -->
+    <section class="preview-section">
+        <p class="preview-label">Buttons</p>
+        <div class="preview-row">
+            <a href="#" class="v2-btn-primary" data-cta-location="preview" data-cta-target="register">Get started free</a>
+            <a href="#" class="btn-ghost">Learn more</a>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="preview-section">
+        <p class="preview-label">Cards</p>
+        <div class="preview-row">
+            <div class="v2-card" style="padding:1.5rem;width:280px;">
+                <p class="eyebrow">Feature</p>
+                <h3 style="margin-top:.5rem;">Static card</h3>
+                <p class="text-secondary" style="margin-top:.5rem;">bone-200 bg, bone-300 border, radius-lg. No shadows.</p>
+            </div>
+            <div class="v2-card v2-card-interactive" style="padding:1.5rem;width:280px;">
+                <p class="eyebrow">Feature</p>
+                <h3 style="margin-top:.5rem;">Interactive card</h3>
+                <p class="text-secondary" style="margin-top:.5rem;">Hover: border-color ink-500, translateY(-2px).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stat numerals / status glyphs -->
+    <section class="preview-section">
+        <p class="preview-label">Stat numerals &amp; status glyphs</p>
+        <div class="preview-row" style="align-items:center;">
+            <span class="stat-numeral" style="font-size:2rem;">2,481</span>
+            <span class="status-jade">&#10003; Passed</span>
+            <span class="status-amber">&#9679; Coming soon</span>
+            <span class="status-ink">&#10007; Not available</span>
+        </div>
+    </section>
+
+    <!-- Spine: horizontal with labels -->
+    <section class="preview-section">
+        <p class="preview-label">Spine — horizontal, with labels</p>
+        <nav class="spine" aria-label="Application stages" style="max-width:600px;">
+            <div class="spine-stage -past"><span class="spine-dot"></span><span class="spine-label">Interested</span></div>
+            <div class="spine-connector -past"></div>
+            <div class="spine-stage -past"><span class="spine-dot"></span><span class="spine-label">Applied</span></div>
+            <div class="spine-connector"></div>
+            <div class="spine-stage -current"><span class="spine-dot-wrap"><span class="spine-pulse-halo"></span><span class="spine-dot"></span></span><span class="spine-label">Interview</span></div>
+            <div class="spine-connector"></div>
+            <div class="spine-stage -future"><span class="spine-dot"></span><span class="spine-label">Offer</span></div>
+        </nav>
+    </section>
+
+    <!-- Spine: vertical -->
+    <section class="preview-section">
+        <p class="preview-label">Spine — vertical (desktop rail)</p>
+        <nav class="spine -vertical" aria-label="Application stages" style="height:220px;max-width:160px;">
+            <div class="spine-stage -past"><span class="spine-dot"></span><span class="spine-label">Interested</span></div>
+            <div class="spine-connector -past"></div>
+            <div class="spine-stage -current"><span class="spine-dot-wrap"><span class="spine-pulse-halo"></span><span class="spine-dot"></span></span><span class="spine-label">Applied</span></div>
+            <div class="spine-connector"></div>
+            <div class="spine-stage -future"><span class="spine-dot"></span><span class="spine-label">Interview</span></div>
+            <div class="spine-connector"></div>
+            <div class="spine-stage -future"><span class="spine-dot"></span><span class="spine-label">Offer</span></div>
+        </nav>
+    </section>
+
+    <!-- Spine: compact -->
+    <section class="preview-section">
+        <p class="preview-label">Spine — compact (list/table rows)</p>
+        <nav class="spine -compact" aria-label="Application stages" style="max-width:160px;">
+            <div class="spine-stage -past"><span class="spine-dot"></span></div>
+            <div class="spine-connector -past"></div>
+            <div class="spine-stage -current"><span class="spine-dot-wrap"><span class="spine-pulse-halo"></span><span class="spine-dot"></span></span></div>
+            <div class="spine-connector"></div>
+            <div class="spine-stage -future"><span class="spine-dot"></span></div>
+            <div class="spine-connector"></div>
+            <div class="spine-stage -future"><span class="spine-dot"></span></div>
+        </nav>
+    </section>
+
+    <!-- Spine: completion state -->
+    <section class="preview-section">
+        <p class="preview-label">Spine — completion state (current dot stays persimmon at the final stage; no jade glow, verified against the real app 2026-08-23)</p>
+        <nav class="spine" aria-label="Application stages" style="max-width:600px;">
+            <div class="spine-stage -past"><span class="spine-dot"></span><span class="spine-label">Interested</span></div>
+            <div class="spine-connector -past"></div>
+            <div class="spine-stage -past"><span class="spine-dot"></span><span class="spine-label">Applied</span></div>
+            <div class="spine-connector -past"></div>
+            <div class="spine-stage -past"><span class="spine-dot"></span><span class="spine-label">Interview</span></div>
+            <div class="spine-connector -past"></div>
+            <div class="spine-stage -current"><span class="spine-dot-wrap"><span class="spine-pulse-halo"></span><span class="spine-dot"></span></span><span class="spine-label">Offer</span></div>
+        </nav>
+    </section>
+
+    <!-- vg-board -->
+    <section class="preview-section">
+        <p class="preview-label">.vg-board — hero dashboard, traveling card (14s loop)</p>
+        <div class="vg-board" style="max-width:640px;">
+            <div class="vg-board-columns">
+                <div class="vg-board-col"><span class="vg-board-col-label">Interested</span></div>
+                <div class="vg-board-col"><span class="vg-board-col-label">Applied</span></div>
+                <div class="vg-board-col"><span class="vg-board-col-label">Interview</span></div>
+                <div class="vg-board-col">
+                    <span class="vg-board-col-label">Offer</span>
+                    <div class="vg-board-toast">Interview booked &mdash; Tuesday</div>
+                </div>
+            </div>
+            <div class="vg-board-traveler">Monzo &mdash; Senior Dev</div>
+        </div>
+    </section>
+
+    <!-- vg-quickadd -->
+    <section class="preview-section">
+        <p class="preview-label">.vg-quickadd</p>
+        <div class="vg-quickadd" style="max-width:360px;">
+            <div class="vg-quickadd-url">linkedin.com/jobs/monzo-senior-dev</div>
+            <div class="vg-quickadd-fields">
+                <div class="vg-quickadd-field"><span class="label">Company</span>Monzo</div>
+                <div class="vg-quickadd-field"><span class="label">Role</span>Senior Developer</div>
+                <div class="vg-quickadd-field"><span class="label">Location</span>London &middot; Hybrid</div>
+            </div>
+            <span class="vg-quickadd-save -pulse">Save application</span>
+        </div>
+    </section>
+
+    <!-- vg-calendar -->
+    <section class="preview-section">
+        <p class="preview-label">.vg-calendar</p>
+        <div class="vg-calendar" style="max-width:420px;">
+            <div class="vg-calendar-week">
+                <div class="vg-calendar-day">M</div>
+                <div class="vg-calendar-day">T</div>
+                <div class="vg-calendar-day -active">W</div>
+                <div class="vg-calendar-day">T</div>
+                <div class="vg-calendar-day">F</div>
+                <div class="vg-calendar-day">S</div>
+                <div class="vg-calendar-day">S</div>
+            </div>
+            <div class="vg-calendar-event">
+                <span>Interview &mdash; Monzo</span>
+                <span class="time">Wed 14:00</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- vg-offers -->
+    <section class="preview-section">
+        <p class="preview-label">.vg-offers</p>
+        <div class="vg-offers" style="max-width:480px;">
+            <div class="vg-offers-grid">
+                <div class="vg-offers-card">
+                    <div class="company">Monzo</div>
+                    <div class="role">Senior Developer</div>
+                    <div class="salary">&pound;68,000</div>
+                    <span class="vg-offers-tag">&#10003; Best match</span>
+                </div>
+                <div class="vg-offers-card">
+                    <div class="company">BBC</div>
+                    <div class="role">Software Engineer</div>
+                    <div class="salary">&pound;61,500</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- vg-list -->
+    <section class="preview-section">
+        <p class="preview-label">.vg-list</p>
+        <div class="vg-list" style="max-width:480px;">
+            <div class="vg-list-row -flagged">
+                <div class="vg-list-row-main">
+                    <div class="company">Monzo</div>
+                    <div class="role">Senior Developer</div>
+                </div>
+                <nav class="spine -compact" aria-label="Application stages">
+                    <div class="spine-stage -current"><span class="spine-dot-wrap"><span class="spine-pulse-halo"></span><span class="spine-dot"></span></span></div>
+                    <div class="spine-connector"></div>
+                    <div class="spine-stage -future"><span class="spine-dot"></span></div>
+                    <div class="spine-connector"></div>
+                    <div class="spine-stage -future"><span class="spine-dot"></span></div>
+                </nav>
+            </div>
+            <div class="vg-list-row">
+                <div class="vg-list-row-main">
+                    <div class="company">BBC</div>
+                    <div class="role">Software Engineer</div>
+                </div>
+                <nav class="spine -compact" aria-label="Application stages">
+                    <div class="spine-stage -past"><span class="spine-dot"></span></div>
+                    <div class="spine-connector -past"></div>
+                    <div class="spine-stage -current"><span class="spine-dot-wrap"><span class="spine-pulse-halo"></span><span class="spine-dot"></span></span></div>
+                    <div class="spine-connector"></div>
+                    <div class="spine-stage -future"><span class="spine-dot"></span></div>
+                </nav>
+            </div>
+            <div class="vg-list-row">
+                <div class="vg-list-row-main">
+                    <div class="company">NHS Digital</div>
+                    <div class="role">Backend Engineer</div>
+                </div>
+                <nav class="spine -compact" aria-label="Application stages">
+                    <div class="spine-stage -past"><span class="spine-dot"></span></div>
+                    <div class="spine-connector -past"></div>
+                    <div class="spine-stage -past"><span class="spine-dot"></span></div>
+                    <div class="spine-connector -past"></div>
+                    <div class="spine-stage -current"><span class="spine-dot-wrap"><span class="spine-pulse-halo"></span><span class="spine-dot"></span></span></div>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark section -->
+    <section class="preview-section">
+        <p class="preview-label">Dark section</p>
+        <div class="section-dark preview-dark-wrap">
+            <h2>Ready when you are.</h2>
+            <p style="margin-top:.75rem;"><a href="#">A footer-style link</a></p>
+            <a href="#" class="v2-btn-primary" style="margin-top:1rem;">Get started free</a>
+        </div>
+    </section>
+
+    <!-- Reveal demo -->
+    <section class="preview-section">
+        <p class="preview-label">Reveal-on-scroll (scroll to trigger)</p>
+        <div style="height:60vh;"></div>
+        <div class="v2-card reveal" style="padding:1.5rem;max-width:320px;">This card fades/slides in via IntersectionObserver.</div>
+        <div style="height:20vh;"></div>
+    </section>
+
+</div>
+
+<script src="/script.js" defer></script>
+</body>
+</html>
