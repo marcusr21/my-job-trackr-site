@@ -1718,3 +1718,111 @@ body.-sticky-cta-shown {
     margin: 1.5rem 0;
     border-radius: var(--radius-sm);
 }
+
+/* ---- Start page: link-in-bio landing (/start/) ----
+   Focused page for TikTok / Instagram bio traffic. No nav, footer or sticky CTA.
+   CTA order and emphasis are set by start/start.js from the visitor's device. */
+.v2-start {
+    background: var(--bone-100);
+    color: var(--ink-900);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    margin: 0;
+}
+.v2-start-inner {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 1.25rem 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "head" "copy" "card" "ctas" "features" "foot";
+    row-gap: 1.5rem;
+}
+.v2-start-head { grid-area: head; display: flex; align-items: center; justify-content: space-between; min-height: 48px; }
+.v2-start-brand { display: flex; align-items: center; gap: 0.625rem; color: var(--ink-900); text-decoration: none; font-weight: 700; font-size: 1.0625rem; }
+.v2-start-brand img { border-radius: 10px; border: 1px solid var(--bone-300); }
+.v2-start-login { display: inline-flex; align-items: center; min-height: 48px; padding: 0 0.25rem; color: var(--ink-500); font-weight: 600; font-size: var(--text-xs); text-decoration: none; }
+.v2-start-login:hover { color: var(--ink-900); }
+
+.v2-start-copy { grid-area: copy; }
+.v2-start-eyebrow { margin: 0.5rem 0 0; text-transform: uppercase; font-size: var(--text-2xs); font-weight: 600; letter-spacing: 0.1em; color: var(--ink-500); }
+.v2-start-copy h1 { margin: 0.625rem 0 0; font-family: var(--font-display); font-size: 2.125rem; line-height: 1.08; font-weight: 700; letter-spacing: -0.02em; }
+.v2-start-sub { margin: 0.75rem 0 0; font-size: var(--text-sm); line-height: 1.5; color: var(--ink-500); }
+
+.v2-start-card { grid-area: card; padding: 1.125rem 1.125rem 1rem; display: flex; flex-direction: column; gap: 1rem; }
+.v2-start-card-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.75rem; }
+.v2-start-card-title { margin: 0; font-weight: 600; font-size: var(--text-sm); }
+.v2-start-card-meta { margin: 0.125rem 0 0; font-size: var(--text-xs); color: var(--ink-500); }
+.v2-start-pill { display: inline-flex; align-items: center; gap: 0.375rem; padding: 0.3rem 0.625rem; border-radius: var(--radius-pill); background: var(--amber-100); color: var(--ink-700); font-size: var(--text-2xs); font-weight: 600; white-space: nowrap; }
+.v2-start-pill-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--amber-500); }
+
+.v2-start-ctas { grid-area: ctas; }
+.v2-start-cta-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.v2-start-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 150ms var(--ease);
+}
+.v2-start-cta.-primary {
+    min-height: 56px;
+    background: var(--persimmon-700); /* white 19px bold on persimmon-700 passes large-text contrast */
+    color: #ffffff;
+    font-size: 1.1875rem;
+    font-weight: 700;
+}
+.v2-start-cta.-primary:hover { background: var(--persimmon-900); }
+.v2-start-cta.-secondary { background: var(--bone-50); color: var(--ink-900); border: 1px solid var(--ink-900); }
+.v2-start-cta.-secondary:hover { background: var(--bone-200); }
+.v2-start-cta.-link { color: var(--ink-500); text-decoration: underline; text-underline-offset: 3px; font-size: var(--text-xs); }
+.v2-start-cta.-link:hover { color: var(--ink-900); }
+.v2-start-cta:focus-visible { outline: 2px solid var(--persimmon-500); outline-offset: 2px; }
+.v2-start-note { margin: -0.25rem 0 0.25rem; text-align: center; font-size: 0.8125rem; color: var(--ink-500); }
+
+/* QR panel is desktop only */
+.v2-start-qr { grid-area: qr; display: none; }
+
+.v2-start-features { grid-area: features; list-style: none; margin: 0; padding: 1rem 0 0; border-top: 1px solid var(--bone-300); display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9375rem; }
+.v2-start-features li { display: flex; align-items: center; gap: 0.75rem; }
+.v2-start-features svg { flex-shrink: 0; color: var(--ink-900); }
+
+.v2-start-foot { grid-area: foot; margin: 0; text-align: center; font-size: 0.8125rem; line-height: 1.5; color: var(--ink-500); }
+
+@media (min-width: 1024px) {
+    .v2-start-inner {
+        max-width: 1120px;
+        padding: 1.5rem 2.5rem 3rem;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+        grid-template-areas:
+            "head head"
+            "copy card"
+            "ctas features"
+            "qr features"
+            "foot foot";
+        column-gap: 4.5rem;
+        row-gap: 2rem;
+        align-items: start;
+    }
+    .v2-start-copy { padding-top: 3rem; }
+    .v2-start-copy h1 { font-size: 3.5rem; line-height: 1.04; }
+    .v2-start-sub { font-size: var(--text-md); max-width: 30rem; }
+    .v2-start-card { margin-top: 3rem; padding: 1.5rem; }
+    .v2-start-cta-list { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 1rem 1.25rem; }
+    .v2-start-cta.-primary { padding: 0 1.75rem; }
+    .v2-start-note { margin: 0; text-align: left; }
+    /* Desktop: store links live in the QR panel, so hide the duplicates */
+    [data-device="desktop"] .v2-start-cta.-link { display: none; }
+    .v2-start-features { border-top: none; padding-top: 0.5rem; }
+    [data-device="desktop"] .v2-start-qr { display: flex; align-items: center; gap: 1.25rem; padding: 1.25rem; }
+    .v2-start-qr img { background: var(--bone-50); border-radius: var(--radius-sm); padding: 6px; }
+    .v2-start-qr-title { margin: 0; font-weight: 600; }
+    .v2-start-qr-text { margin: 0.375rem 0 0; font-size: var(--text-xs); line-height: 1.5; color: var(--ink-500); }
+    .v2-start-qr-text a { color: var(--ink-900); font-weight: 600; }
+}
