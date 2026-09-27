@@ -947,6 +947,17 @@ body.-sticky-cta-shown {
 .v2-hero-content h1 {
     margin-bottom: 1rem;
 }
+/* Keyword kicker inside the hero H1. Persimmon tokens fail WCAG AA at this size on bone, so ink-500 is used. */
+.v2-hero-kicker {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-500);
+    margin-bottom: 0.75rem;
+}
 .v2-hero-subhead {
     font-size: var(--text-md);
     color: var(--ink-500);
@@ -988,6 +999,9 @@ body.-sticky-cta-shown {
 }
 
 /* What is job tracking */
+.v2-what-is h2 {
+    margin: 0.75rem 0 1rem;
+}
 .v2-what-is-text p {
     margin-bottom: 1rem;
 }
